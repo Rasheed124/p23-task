@@ -186,6 +186,7 @@ img {
   border-radius: 10px;
   background-color: transparent;
   cursor: pointer;
+  font-size: 13px;
 }
 
 .card > div a:last-of-type button {
