@@ -62,7 +62,8 @@ img {
   display: none;
   flex-direction: column;
   width: 100%;
-  background-color: #222;
+  background-color: #0d4036;
+  color: #fff;
   position: absolute;
   top: 80px;
   left: 0;
@@ -71,7 +72,7 @@ img {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.menu-container.active {
+.menu-container ul.active {
   display: flex;
 }
 
@@ -122,6 +123,8 @@ img {
   width: 100%;
   height: 300px;
   position: relative;
+  overflow-x: hidden;
+
 }
 .content-image img{
   object-fit: cover;
