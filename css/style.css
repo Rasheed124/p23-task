@@ -107,6 +107,7 @@ img {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 30px;
+  overflow-x: hidden;
 }
 .image , .content-image{
   display: flex;
