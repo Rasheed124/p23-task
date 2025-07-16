@@ -11,8 +11,6 @@ body{
   overflow-x: hidden;
 }
 
-*:focus {outline:none}
-
 
 a {
   text-decoration: none;
@@ -110,32 +108,13 @@ img {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 30px;
-  overflow-x: hidden;
 }
-.image , .content-image{
+.image , .content-image-pattern{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image img{
-  max-width: 100%;
-}
-.content-image{
-  width: 400px;
-  height: 300px;
-  position: relative;
-  overflow-x: hidden;
-
-}
-.content-image img{
-  object-fit: cover;
-  object-position: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  left: 0;
-}
 
 .intro-section {
   background-image: url(../assets/bgimage.png);
@@ -244,8 +223,6 @@ img {
   display: flex;
   gap: 20px;
   align-items: center;
-  font-size: 12px;
-  outline: none;
 }
 .card h3 {
   font-size: 30px;
@@ -424,7 +401,7 @@ footer a {
 
 .content-image .content-image-pattern img {
   position: absolute;
-  top: 150px;
+  top: 30px;
   left: 0px;
   object-position: center;
   z-index: -1;
