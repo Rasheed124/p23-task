@@ -7,6 +7,10 @@
   box-sizing: border-box;
   font-family: "GT Walsheim Trial", sans-serif;
 }
+body{
+  overflow-x: hidden;
+}
+
 
 a {
   text-decoration: none;
@@ -15,10 +19,10 @@ a {
 header {
   background-color: #0d4036;
   padding: 30px;
-  /* display: none; */
+  width: 100%;
 }
 img {
-  max-width: 100%;
+  max-width: 400px;
 }
 .container {
   max-width: 1300px;
@@ -26,61 +30,90 @@ img {
   padding: 20px;
 }
 
-header .nav-container {
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1300px;
   margin: 0 auto;
-}
-nav .logo {
-  margin-right: 10px;
+  padding: 0 20px;
 }
 
-nav .logo img {
-  width: 70px;
+.logo img {
+  width: 60px;
+  height: auto;
 }
-nav ul {
-  list-style-type: none;
+
+.menu-toggle {
   display: flex;
-  gap: 25px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 28px;
 }
 
-nav ul.menu {
-  gap: 50px;
-}
-nav ul.menu li a {
-  gap: 50px;
-  font-weight: 400;
+.menu-toggle .bar {
+  display: none;
 }
 
-nav ul li a {
+.menu-container ul {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #222;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: 1000;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-container.active {
+  display: flex;
+}
+
+.menu {
+  list-style-type: none;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  width: 100%;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px 0;
   text-decoration: none;
   color: #fff;
   font-size: 15px;
-  cursor: pointer;
+  font-weight: 400;
 }
 
-nav li button {
-  padding: 15px 30px;
-  margin-top: -8px;
-  border-radius: 10px;
-  background-color: transparent;
-  border: 1px solid white;
-  color: #fff;
-  cursor: pointer;
+.icons {
+  display: none;
 }
+
+/* =========================== Intro Section */
 .intro-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 30px;
 }
-
-.image {
-  max-width: 400px;
+.image , .content-image-pattern{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* =========================== Intro Section */
 
 .intro-section {
   background-image: url(../assets/bgimage.png);
@@ -108,8 +141,7 @@ nav li button {
   z-index: -1;
   width: 100%;
   height: 100%;
-  transform: rotate(32.96deg);
-  /* border: 1px solid red; */
+  display: none;
 }
 
 .content h2 span {
@@ -170,7 +202,7 @@ nav li button {
 .card.second {
   background-color: #0d4036;
   color: #fff;
-  transform: rotate(-10deg);
+  /* transform: rotate(-10deg); */
 }
 .card.second > div a:first-of-type button {
   color: #fff;
@@ -219,59 +251,56 @@ nav li button {
 footer a {
   color: #fff;
 }
-.footer-container .logo-container p{
-    width: 340px;
-    line-height: 30px;
-    font-size: 18px;
+.footer-container .logo-container p {
+  width: 340px;
+  line-height: 30px;
+  font-size: 18px;
 }
 .footer-container h4 {
   padding-bottom: 20px;
   font-weight: 400;
 }
 .footer-container p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-.footer-container ul{
-    list-style: none;
+.footer-container ul {
+  list-style: none;
 }
-.footer-container  .logo{
-    margin-bottom: 30px;
+.footer-container .logo {
+  margin-bottom: 30px;
 }
-.footer-container ul li{
- margin-bottom: 10px;
- line-height: 27px;
-}
-
-.footer-container form input{
-    padding: 10px 20px;
-    border-radius: 10px;
-    outline: none;
-    width: 300px;
-    height: 70px;
-    background-color: transparent;
-    border: 1px solid #CCED60;
-    color: #CCED60;
-    margin-bottom: 10px;
-
-
-
+.footer-container ul li {
+  margin-bottom: 10px;
+  line-height: 27px;
 }
 
-.footer-container form  > div button{
-    padding: 16px 30px;
-    background-color: #CCED60;
-    color: #0d4036;
-    outline: none;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    font-size: 17px;
+.footer-container form input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+  width: 300px;
+  height: 70px;
+  background-color: transparent;
+  border: 1px solid #cced60;
+  color: #cced60;
+  margin-bottom: 10px;
 }
-.footer-container .socials{
-    display: flex;
-    gap: 10px;
+
+.footer-container form > div button {
+  padding: 16px 30px;
+  background-color: #cced60;
+  color: #0d4036;
+  outline: none;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 17px;
+}
+.footer-container .socials {
+  display: flex;
+  gap: 10px;
 }
 
 .bootom-footer {
@@ -280,16 +309,70 @@ footer a {
   justify-content: end;
   padding-top: 50px;
 }
-.bootom-footer ul  {
+.bootom-footer ul {
   display: flex;
   gap: 40px;
 }
-.bootom-footer ul li{
+.bootom-footer ul li {
   font-weight: 200;
 }
 
-
 @media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-container ul {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    width: auto;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .menu {
+    flex-direction: row;
+    gap: 50px;
+    width: auto;
+  }
+
+  .menu li a {
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .icons {
+    display: flex;
+  }
+
+  .icons ul {
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    align-items: center;
+  }
+
+  .icons li button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  .icons li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+  }
   .intro-container {
     padding: 30px 0px;
     grid-template-columns: repeat(2, 1fr);
@@ -309,8 +392,30 @@ footer a {
     height: 450px;
   }
 
+  
+.content-image {
+  position: relative;
+  z-index: 3;
+}
+
+.content-image .content-image-pattern img {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  object-position: center;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: rotate(32.96deg);
+}
+
   .cards-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card.second {
+    transform: rotate(-10deg);
   }
 
   .footer-container {
