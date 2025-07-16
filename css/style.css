@@ -279,9 +279,12 @@ footer a {
   justify-content: end;
   padding-top: 50px;
 }
-.bootom-footer ul {
+.bootom-footer ul  {
   display: flex;
   gap: 40px;
+}
+.bootom-footer ul li{
+  font-weight: 200;
 }
 
 
