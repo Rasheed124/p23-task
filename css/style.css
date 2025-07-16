@@ -22,7 +22,7 @@ header {
   width: 100%;
 }
 img {
-  max-width: 400px;
+  max-width: 100%;
 }
 .container {
   max-width: 1300px;
@@ -113,6 +113,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image img{
+  max-width: 300px;
 }
 
 
@@ -385,13 +389,15 @@ footer a {
     padding-bottom: 20px;
   }
 
-  .image {
-    max-width: 100%;
-  }
+
   .content-image img {
     max-width: 700px;
     height: 450px;
   }
+
+  .image img{
+  max-width: 100%;
+}
 
   
 .content-image {
