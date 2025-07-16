@@ -114,6 +114,10 @@ img {
   align-items: center;
 }
 
+.image img{
+  max-width: 80px;
+}
+
 
 .intro-section {
   background-image: url(../assets/bgimage.png);
