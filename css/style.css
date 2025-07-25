@@ -372,7 +372,6 @@ img {
   gap: 30px;
 }
 .tab-content .desktop-cards {
-
   display: none;
 }
 
@@ -695,9 +694,9 @@ footer a {
     overflow: hidden;
   }
 
-  .intro-container .content{
+  .intro-container .content {
     overflow: hidden;
-    visibility:visible;
+    visibility: visible;
   }
 
   /* Common transition */
@@ -721,7 +720,7 @@ footer a {
   /* Fade In from Left */
   [data-aos="custom-fade-left"] {
     opacity: 1;
-   transform: translateX(680px);
+    transform: translateX(680px);
     transition: all 0.8s ease-out;
     visibility: visible;
   }
@@ -731,18 +730,18 @@ footer a {
     transform: translateX(0);
   }
 
-/* Fade In from Top to Down */
-[data-aos="custom-fade-down"] {
-  opacity: 1;
-  transform: translateY(-108px); /* Slightly above */
-  transition: all 0.8s ease-out;
-  /* visibility: visible; */
-}
+  /* Fade In from Top to Down */
+  [data-aos="custom-fade-down"] {
+    opacity: 1;
+    transform: translateY(-108px); /* Slightly above */
+    transition: all 0.8s ease-out;
+    /* visibility: visible; */
+  }
 
-[data-aos="custom-fade-down"].aos-animate {
-  opacity: 1;
-  transform: translateY(0);
-}
+  [data-aos="custom-fade-down"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   .container {
     max-width: initial;
