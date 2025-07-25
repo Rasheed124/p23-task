@@ -4,6 +4,23 @@
 /* @import url("https://fonts.cdnfonts.com/css/gt-walsheim-trial"); */
 
 @font-face {
+  font-family: "GT Walsheim Trial Cn Lt";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Lt"),
+    url("../fonts/gt-trial/GT-Walsheim-Condensed-Light-Trial-BF651b7fc73810c.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Lt Ob";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Lt Ob"),
+    url("../fonts/gt-trial/GT-Walsheim-Light-Oblique-Trial-BF651b7fc6b04a3.woff")
+      format("woff");
+}
+@font-face {
   font-family: "GT Walsheim Pro";
 
   src: url("../fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff2")
@@ -194,9 +211,8 @@ img {
   text-decoration: none;
   color: #ffffff;
   font-size: 15px;
-  font-family: "GT Walsheim Con";
-  font-weight: 500;
-  transition: 300ms;
+ font-family: "GT Walsheim Trial Cn Lt";
+ font-family: 200;
 }
 
 .icons {
@@ -424,8 +440,11 @@ img {
 }
 
 .card p {
-  font-weight: 300;
-  font-weight: lighter;
+ font-family: "GT Walsheim Trial Cn Lt";
+ font-family: 200;
+ line-height: 20px;
+ font-size: 23px;
+ padding-right: 10px;
 }
 
 .card button {
@@ -572,9 +591,8 @@ footer a {
   display: flex;
   justify-content: end;
   padding-top: 50px;
-  /* font-family: "Noto Sans Georgian", sans-serif;
-  font-weight: 400; */
-  font-family: 300;
+ font-family: "GT Walsheim Trial Cn Lt";
+ font-family: 200;
 }
 .bootom-footer ul {
   display: flex;
