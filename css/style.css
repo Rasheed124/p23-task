@@ -387,6 +387,9 @@ img {
   grid-template-columns: repeat(1, 1fr);
   gap: 30px;
 }
+.tab-content .mobile-cards .card .card-title img {
+  rotate: 5deg;
+} 
 .tab-content .desktop-cards {
   display: none;
 }
