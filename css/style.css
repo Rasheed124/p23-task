@@ -524,6 +524,7 @@ img {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 40px;
+  padding-top: 30px;
 }
 footer a {
   color: #fff;
@@ -550,6 +551,36 @@ footer a {
   margin-bottom: 10px;
   line-height: 27px;
 }
+.mobile-footer  .mobile-form div{
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-footer  .mobile-form div button {
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 25px 20px;
+  background-color: #cced60;
+  border: 0;
+  outline: none;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+  font-size: 18px;
+  font-weight: bold;
+  
+}
+
+.mobile-footer  .mobile-form div input {
+  background-color: #fff;
+  color: #000;
+  padding-right: 36%;
+}
+.footer-container form.mobile-form input::placeholder {
+  color: #0d4036
+}
+
 
 .footer-container form input {
   padding: 10px 20px;
@@ -568,7 +599,7 @@ footer a {
   opacity: 0.5; /* make sure it's not transparent */
 }
 
-.footer-container form > div button {
+.footer-container .fourth-widget form  button {
   padding: 16px 30px;
   background-color: #cced60;
   color: #0d4036;
@@ -580,6 +611,7 @@ footer a {
   font-size: 17px;
   border: none;
   outline: none;
+  display: none;
 }
 .footer-container .socials {
   display: flex;
@@ -602,6 +634,35 @@ footer a {
   font-weight: 200;
   white-space: nowrap;
 }
+
+/* . */
+
+.mobile-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  place-content: start;
+  place-items: start;
+}
+.mobile-footer > div:nth-child(2) {
+  margin-left: -50px;
+}
+
+.mobile-footer .logo-container {
+  max-width: 200px;
+}
+
+.footer-container .mobile-footer + .logo-container,
+.footer-container .first-widget,
+.bootom-footer ul li:not(:first-of-type),
+.second-widget,
+.fourth-widget {
+  display: none;
+}
+
+
+
+
 
 @media screen and (min-width: 768px) {
   .menu {
@@ -637,6 +698,19 @@ footer a {
 
   .footer-container .logo-container p {
     width: 340px;
+  }
+
+  .footer-container .mobile-footer + .logo-container,
+  .footer-container .first-widget,
+  .bootom-footer ul li:not(:first-of-type),
+  .second-widget,
+  .footer-container form > div.button button,
+  .fourth-widget {
+    display: block;
+  }
+
+  .mobile-footer {
+    display: none;
   }
 }
 @media screen and (min-width: 992px) {
@@ -840,7 +914,6 @@ footer a {
     color: #fff;
   }
   #tab1 .desktop-cards .card.first p {
-   
     font-size: 20px;
     line-height: 22px;
   }
@@ -874,6 +947,14 @@ footer a {
   .tab-buttons {
     display: none;
   }
+
+  .mobile-footer {
+    display: none;
+  }
+
+  .footer-container form > div.button button {
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -883,7 +964,6 @@ footer a {
     overflow: hidden;
   }
   .image {
-    /* border: 1px solid red; */
     max-width: 600px;
     margin-left: 95px;
   }
