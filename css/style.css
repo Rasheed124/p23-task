@@ -654,6 +654,11 @@ footer a {
   .image {
     display: block;
   }
+  .container {
+  max-width: initial;
+  margin: 0 auto;
+  padding: 0px;
+}
   .intro-container {
     overflow-y: hidden;
     overflow-x: auto;
@@ -668,6 +673,11 @@ footer a {
     top: 0px;
     right: 0px;
   }
+
+  .content-image .first {
+    /* border: 1px solid red; */
+  }
+
   .content-image .first .mobile-image {
     display: none;
   }
@@ -753,7 +763,12 @@ footer a {
   .image {
     /* border: 1px solid red; */
     max-width: 600px;
+    margin-left: 95px;
   }
+
+  .intro-container .content h2 {
+    max-width: 600px;
+}
   .content-image img {
     max-width: initial;
   }

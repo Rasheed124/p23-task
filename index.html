@@ -10,7 +10,7 @@
 
     <!-- donald@p23africa.com -->
 
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
   </head>
@@ -90,12 +90,13 @@
     <section class="intro-section">
       <div class="container">
         <div class="intro-container">
-          <div class="image" data-aos="fade-left" data-aos-delay="1000">
+          <div class="image" data-aos="fade-right" data-aos-delay="1000">
             <img src="./assets/intro1.png" alt="" />
           </div>
-
-          <div class="content">
-            <h2>Gaining Knowledge <span>Through Connection.</span></h2>
+          <div class="content" data-aos="fade-left" data-aos-delay="1500">
+            <h2 data-aos="fade-up" data-aos-delay="2000">
+              Gaining Knowledge <span>Through Connection.</span>
+            </h2>
 
             <div class="content-image">
               <div class="first">
@@ -606,7 +607,10 @@
             <div>
               <form action="">
                 <div>
-                  <input type="Enter Your email" placeholder="Enter your email" />
+                  <input
+                    type="Enter Your email"
+                    placeholder="Enter your email"
+                  />
                 </div>
 
                 <div>
@@ -630,5 +634,10 @@
     </footer>
 
     <script src="./script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
