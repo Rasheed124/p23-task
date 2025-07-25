@@ -537,6 +537,8 @@ footer a {
   align-items: center;
   gap: 30px;
   font-size: 17px;
+  border: none;
+  outline: none;
 }
 .footer-container .socials {
   display: flex;
@@ -558,6 +560,7 @@ footer a {
 }
 .bootom-footer ul li {
   font-weight: 200;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 768px) {
