@@ -112,7 +112,6 @@ img {
 .main-container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 2px;
 }
 
 .nav-container {
@@ -318,7 +317,7 @@ img {
 }
 
 .card-section {
-  background-image: url(../assets/images/bg-events.png);
+  background-image: url(../assets/images/bg-intro.png);
   padding: 50px 0px;
 }
 .cards-container {
@@ -327,8 +326,7 @@ img {
   gap: 60px;
 }
 
-.tabs {
-}
+
 
 .tab-content .desktop-cards {
   display: none;
@@ -345,16 +343,16 @@ img {
   cursor: pointer;
   background: transparent;
   border: none;
-  color: #fff;
+  color: #0d4036;
 
   border-bottom: 2px solid transparent;
   transition: background 0.3s;
+  font-weight: bold;
 }
 
 .tab-buttons button.active {
   background: #0d4036;
-
-  font-weight: bold;
+  color: #fff;
 }
 
 .tab-content {
@@ -470,6 +468,28 @@ img {
   display: flex;
   gap: 10px;
 }
+
+
+
+.main-container .mobile-first-card {
+  background-image: url(../assets/images/bg-events.png);
+  margin-bottom: 50px;
+}
+
+.main-container .mobile-first-card .first {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.main-container .mobile-first-card p {
+  padding-right: 45px;
+}
+.main-container .mobile-first-card a button {
+  font-weight: 300;
+}
+
+
 .footer-section {
   background-color: #0d4036;
   padding: 20px;
@@ -668,10 +688,10 @@ footer a {
     display: block;
   }
   .container {
-  max-width: initial;
-  margin: 0 auto;
-  padding: 0px;
-}
+    max-width: initial;
+    margin: 0 auto;
+    padding: 0px;
+  }
   .intro-container {
     overflow-y: hidden;
     overflow-x: auto;
@@ -707,6 +727,13 @@ footer a {
 
   .image img {
     max-width: 100%;
+  }
+
+  .card-section {
+    background-image: url(../assets/images/bg-events.png);
+  }
+  .main-container .mobile-first-card {
+    display: none;
   }
 
   .tab-content {
@@ -780,13 +807,13 @@ footer a {
     margin-left: 95px;
   }
 
-    .intro-container .content {
-      margin-right: -50px;
-    }
+  .intro-container .content {
+    margin-right: -50px;
+  }
 
   .intro-container .content h2 {
     max-width: 600px;
-}
+  }
   .content-image img {
     max-width: initial;
   }
@@ -811,7 +838,7 @@ footer a {
 }
 
 @media screen and (min-width: 1500px) {
-  .container{
+  .container {
     max-width: 1500px;
     margin: 0 auto;
   }
