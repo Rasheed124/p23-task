@@ -764,12 +764,17 @@ footer a {
   .intro-container {
     gap: 10px;
     padding: 40px 30px;
+    overflow: hidden;
   }
   .image {
     /* border: 1px solid red; */
     max-width: 600px;
     margin-left: 95px;
   }
+
+    .intro-container .content {
+      margin-right: -50px;
+    }
 
   .intro-container .content h2 {
     max-width: 600px;
