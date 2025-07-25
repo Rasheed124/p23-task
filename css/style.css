@@ -555,6 +555,10 @@ footer a {
   margin-bottom: 10px;
   line-height: 27px;
 }
+
+.mobile-footer{
+  /* padding-right: 20px; */
+}
 .mobile-footer  .mobile-form div{
   position: relative;
   overflow: hidden;
@@ -649,11 +653,11 @@ footer a {
   place-items: start;
 }
 .mobile-footer > div:nth-child(2) {
-  margin-left: -50px;
+  margin-left: -70px;
 }
 
 .mobile-footer .logo-container {
-  max-width: 200px;
+  max-width: 180px;
 }
 
 .footer-container .mobile-footer + .logo-container,
