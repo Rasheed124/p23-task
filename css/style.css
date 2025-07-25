@@ -211,8 +211,8 @@ img {
   text-decoration: none;
   color: #ffffff;
   font-size: 15px;
- font-family: "GT Walsheim Trial Cn Lt";
- font-family: 200;
+  font-family: "GT Walsheim Trial Cn Lt";
+  font-family: 200;
 }
 
 .icons {
@@ -440,11 +440,11 @@ img {
 }
 
 .card p {
- font-family: "GT Walsheim Trial Cn Lt";
- font-family: 200;
- line-height: 20px;
- font-size: 23px;
- padding-right: 10px;
+  font-family: "GT Walsheim Trial Cn Lt";
+  font-family: 200;
+  line-height: 25px;
+  font-size: 16px;
+  padding-right: 10px;
 }
 
 .card button {
@@ -591,8 +591,8 @@ footer a {
   display: flex;
   justify-content: end;
   padding-top: 50px;
- font-family: "GT Walsheim Trial Cn Lt";
- font-family: 200;
+  font-family: "GT Walsheim Trial Cn Lt";
+  font-family: 200;
 }
 .bootom-footer ul {
   display: flex;
@@ -802,6 +802,12 @@ footer a {
   .card-section {
     background-image: url(../assets/images/bg-events.png);
   }
+
+  .card p {
+    line-height: 20px;
+    font-size: 23px;
+    padding-right: 10px;
+  }
   .main-container .mobile-first-card {
     display: none;
   }
@@ -832,6 +838,11 @@ footer a {
   #tab1 .desktop-cards .card.first {
     background-color: transparent;
     color: #fff;
+  }
+  #tab1 .desktop-cards .card.first p {
+   
+    font-size: 20px;
+    line-height: 22px;
   }
   #tab1 .desktop-cards .card {
     background-color: #fff;
