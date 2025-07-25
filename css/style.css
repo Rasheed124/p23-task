@@ -385,7 +385,12 @@ img {
 
 .cards-container .card {
   padding: 20px;
-  box-shadow: 0px 13px 15px 9px rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 0 10px rgba(0, 0, 0, 0.1),   /* general blur around */
+    0 2px 4px rgba(0, 0, 0, 0.1),   /* bottom */
+    0 -2px 4px rgba(0, 0, 0, 0.1),  /* top */
+    2px -2px 4px rgba(0, 0, 0, 0.1),   /* right */
+   -2px 0 4px rgba(0, 0, 0, 0.1);   /* left */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -474,6 +479,7 @@ img {
 .main-container .mobile-first-card {
   background-image: url(../assets/images/bg-events.png);
   margin-bottom: 50px;
+  margin-top: -35px;
 }
 
 .main-container .mobile-first-card .first {
@@ -707,9 +713,7 @@ footer a {
     right: 0px;
   }
 
-  .content-image .first {
-    /* border: 1px solid red; */
-  }
+
 
   .content-image .first .mobile-image {
     display: none;
