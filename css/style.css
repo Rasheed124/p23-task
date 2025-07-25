@@ -326,8 +326,6 @@ img {
   gap: 60px;
 }
 
-
-
 .tab-content .desktop-cards {
   display: none;
 }
@@ -385,13 +383,12 @@ img {
 
 .cards-container .card {
   padding: 20px;
-  box-shadow: 
-    0 0 10px rgba(0, 0, 0, 0.1),   /* general blur around */
-    0 2px 4px rgba(0, 0, 0, 0.1),   /* bottom */
-    0 -2px 4px rgba(0, 0, 0, 0.1),  /* top */
-    2px -2px 4px rgba(0, 0, 0, 0.1),   /* right */
-   -2px 0 4px rgba(0, 0, 0, 0.1);   /* left */
-   /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),
+    /* general blur around */ 0 2px 4px rgba(0, 0, 0, 0.1),
+    /* bottom */ 0 -2px 4px rgba(0, 0, 0, 0.1),
+    /* top */ 2px -2px 4px rgba(0, 0, 0, 0.1),
+    /* right */ -2px 0 4px rgba(0, 0, 0, 0.1); /* left */
+  /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -476,8 +473,6 @@ img {
   gap: 10px;
 }
 
-
-
 .main-container .mobile-first-card {
   background-image: url(../assets/images/bg-events.png);
   margin-bottom: 50px;
@@ -496,7 +491,6 @@ img {
 .main-container .mobile-first-card a button {
   font-weight: 300;
 }
-
 
 .footer-section {
   background-color: #0d4036;
@@ -695,6 +689,60 @@ footer a {
   .image {
     display: block;
   }
+
+  .container .intro-container .image {
+    overflow: hidden;
+  }
+
+  .intro-container .content{
+    overflow: hidden;
+    visibility:visible;
+  }
+
+  /* Common transition */
+  [data-aos] {
+    transition: all 0.6s ease-out;
+  }
+
+  /* Fade Right */
+  [data-aos="custom-fade-right"] {
+    opacity: 1;
+    transform: translateX(-500px);
+    transition: all 0.8s ease-out;
+    visibility: visible;
+  }
+
+  [data-aos="custom-fade-right"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Fade In from Left */
+  [data-aos="custom-fade-left"] {
+    opacity: 1;
+   transform: translateX(680px);
+    transition: all 0.8s ease-out;
+    visibility: visible;
+  }
+
+  [data-aos="custom-fade-left"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+/* Fade In from Top to Down */
+[data-aos="custom-fade-down"] {
+  opacity: 1;
+  transform: translateY(-108px); /* Slightly above */
+  transition: all 0.8s ease-out;
+  /* visibility: visible; */
+}
+
+[data-aos="custom-fade-down"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
   .container {
     max-width: initial;
     margin: 0 auto;
@@ -714,8 +762,6 @@ footer a {
     top: 0px;
     right: 0px;
   }
-
-
 
   .content-image .first .mobile-image {
     display: none;
