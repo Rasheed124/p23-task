@@ -1,11 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.cdnfonts.com/css/gt-walsheim-trial");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap");
+/* @import url("https://fonts.cdnfonts.com/css/gt-walsheim-trial"); */
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+
+  src: url("../fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Con";
+
+  src: url("../fonts/gt-walsheim-pro/GTWalsheimPro-CondensedRegular.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff") format("woff");
+
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Walsheim Bold";
+
+  src: url("../fonts/gt-walsheim-pro/GTWalsheimPro-Bold.woff2") format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "GT Walsheim ConB";
+
+  src: url("../fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBold.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBold.woff")
+      format("woff");
+}
+@font-face {
+  font-family: "GT Walsheim ConL";
+
+  src: url("../fonts/gt-walsheim-pro/GTWalsheimPro-CondensedLight.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-CondensedLight.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "IvyOraText BoldItalic";
+
+  src: url("../fonts/ivyora-text/IvyOraText-BoldItalic.woff2") format("woff2"),
+    url("../fonts/ivyora-text/IvyOraText-BoldItalic.woff") format("woff"); /* Adjust file names and paths as needed */
+}
+@font-face {
+  font-family: "IvyOra Text";
+
+  src: url("../fonts/ivyora-text/IvyOraText-RegularItalic.woff2")
+      format("woff2"),
+    url("../fonts/ivyora-text/IvyOraText-RegularItalic.woff") format("woff"); /* Adjust file names and paths as needed */
+}
+@font-face {
+  font-family: "IvyOra Text Bold";
+
+  src: url("../fonts/ivyora-text/IvyOraText-Bold.woff2") format("woff2"),
+    url("../fonts/ivyora-text/IvyOraText-Bold.woff") format("woff"); /* Adjust file names and paths as needed */
+}
+@font-face {
+  font-family: "IvyOra Text Medium";
+
+  src: url("../fonts/ivyora-text/IvyOraText-Medium.woff2") format("woff2"),
+    url("../fonts/ivyora-text/IvyOraText-Medium.woff") format("woff"); /* Adjust file names and paths as needed */
+}
+
+body {
+  font-family: "GT Walsheim Pro";
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "GT Walsheim Trial", sans-serif;
+}
+
+button {
+  font-family: "GT Walsheim Pro";
 }
 body {
   overflow-x: hidden;
@@ -17,8 +94,12 @@ a {
 
 header {
   background-color: #0d4036;
-  padding: 30px;
+  padding: 15px 20px;
   width: 100%;
+}
+
+ul {
+  list-style: none;
 }
 img {
   max-width: 100%;
@@ -26,7 +107,7 @@ img {
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2px;
 }
 
 .nav-container {
@@ -36,6 +117,8 @@ img {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
+  font-family: "GT Walsheim Con";
+  font-weight: 500;
 }
 
 .logo img {
@@ -52,27 +135,43 @@ img {
   color: #fff;
   font-size: 28px;
 }
+.menu-toggle img {
+  width: 33px;
+  height: auto;
+}
 
-.menu-toggle .bar {
-  display: none;
+.main-menu-container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  position: relative;
+  background-color: #0d4036;
+  width: 100%;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  transform: scale(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  backface-visibility: hidden;
 }
 
 .menu-container ul {
-  display: none;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-  width: 100%;
-  background-color: #0d4036;
   color: #fff;
-  position: absolute;
-  top: 80px;
-  left: 0;
-  z-index: 1000;
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.menu-container ul.active {
-  display: flex;
+.main-menu-container.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .menu {
@@ -85,21 +184,57 @@ img {
   padding: 0;
 }
 
-.menu li {
-  width: 100%;
-}
-
 .menu li a {
   display: block;
   padding: 10px 0;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   font-size: 15px;
-  font-weight: 400;
+  font-family: "GT Walsheim Con";
+  font-weight: 500;
+  transition: 300ms;
 }
 
 .icons {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.icons ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  align-items: center;
+}
+
+.icons ul:last-of-type {
+  flex-direction: row;
+}
+
+.icons li button {
+  padding: 15px 25px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  outline: none;
+}
+
+.icons li button:focus {
+  outline-color: #fff;
+}
+
+.icons li a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 /* =========================== Intro Section */
@@ -107,45 +242,65 @@ img {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 30px;
-}
-.image,
-.content-image-pattern {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image img {
-  max-width: 300px;
+  overflow: hidden;
+  padding: 20px 0px 0px 0px;
 }
 
 .intro-section {
-  background-image: url(../assets/bgimage.png);
-  background-color: #fff;
-  background-blend-mode: screen;
+  background-image: url(../assets/images/bg-intro.png);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.image {
+  display: none;
 }
 
 .intro-container .content h2 {
   color: #0d4036;
-  font-size: 1.5rem;
+  font-size: 2.1rem;
+
   font-weight: bolder;
   font-family: "Montserrat", sans-serif;
+  padding: 0px 0px 25px 29px;
+}
+.intro-container .content p span {
+  font-weight: 200;
 }
 
 .content-image {
-  position: relative;
+  overflow: hidden;
+  width: 100%;
   z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.content-image .first .desktop-image {
+  display: none;
+}
+
+.content-image img {
+  max-width: 425px;
 }
 
 .content-image .content-image-pattern img {
   position: absolute;
   top: 30px;
-  left: 0px;
+  left: 50px;
   object-position: center;
   z-index: -1;
-  width: 100%;
+  width: 500px;
   height: 100%;
-  display: none;
+}
+
+.content-mobielebottom-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content h2 span {
@@ -153,10 +308,12 @@ img {
 }
 
 /* =======================  Card Container */
+.container {
+  padding: 0px;
+}
+
 .card-section {
-  background-image: url(../assets/bgimage.png);
-  background-color: #2d9378;
-  background-blend-mode: screen;
+  background-image: url(../assets/images/bg-events.png);
   padding: 50px 0px;
 }
 .cards-container {
@@ -165,16 +322,101 @@ img {
   gap: 60px;
 }
 
+.tabs {
+}
+
+.tab-content .desktop-cards {
+  display: none;
+}
+
+.tab-buttons {
+  display: flex;
+  border-bottom: 3px solid #0d4036;
+}
+
+.tab-buttons button {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #fff;
+
+  border-bottom: 2px solid transparent;
+  transition: background 0.3s;
+}
+
+.tab-buttons button.active {
+  background: #0d4036;
+
+  font-weight: bold;
+}
+
+.tab-content {
+  /* padding: 15px; */
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s, height 0.5s ease;
+  margin: 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+
+.tab-content .mobile-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+.tab-content .desktop-cards {
+  display: none;
+}
+
+.tab-content.active {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
 .cards-container .card {
   padding: 20px;
   box-shadow: 0px 13px 15px 9px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: #fff;
   color: #0d4036;
   border-radius: 10px;
+  font-family: "GT Walsheim Con";
+  font-weight: lighter;
 }
+
+.cards-container #tab1 .card {
+  background-color: #0d4036;
+  color: #fff;
+}
+.cards-container #tab1 .card button {
+  color: #fff;
+  border: 1px solid #fff;
+  outline: none;
+}
+.cards-container #tab1 .card div a:last-of-type button {
+  border: none;
+}
+.cards-container #tab2 .card div a:last-of-type button {
+  border: none;
+}
+.cards-container #tab2 .card button {
+  color: #0d4036;
+  border: 1px solid #0d4036;
+  outline: none;
+}
+.cards-container #tab2 .card {
+  background-color: #fff;
+  color: #0d4036;
+}
+
 .card p {
   font-weight: 300;
 }
@@ -186,6 +428,7 @@ img {
   background-color: transparent;
   cursor: pointer;
   font-size: 13px;
+  font-weight: bold;
 }
 
 .card > div a:last-of-type button {
@@ -204,32 +447,13 @@ img {
   padding: 20px 50px;
 }
 
-.card.second {
-  background-color: #0d4036;
-  color: #fff;
-  /* transform: rotate(-10deg); */
-}
-.card.second > div a:first-of-type button {
-  color: #fff;
-  border: 1px solid #fff;
-}
-.card.second > div a:last-of-type button {
-  color: #fff;
-  border: transparent;
-}
-
-.card.second p {
-  font-weight: 200;
-  color: #fefefe;
-}
-
 .card a button {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 .card h3 {
-  font-size: 30px;
+  font-size: 20px;
 }
 .card-title {
   display: flex;
@@ -247,6 +471,8 @@ img {
   color: #fff;
   font-weight: 300;
   margin-top: 20px;
+  font-family: "GT Walsheim Con";
+  font-weight: 200;
 }
 .footer-container {
   display: grid;
@@ -312,6 +538,9 @@ footer a {
   display: flex;
   justify-content: end;
   padding-top: 50px;
+  /* font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 400; */
+  font-family: 300;
 }
 .bootom-footer ul {
   display: flex;
@@ -322,22 +551,6 @@ footer a {
 }
 
 @media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-
-  .menu-container ul {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    width: auto;
-    background-color: transparent;
-    box-shadow: none;
-    padding: 0;
-    flex-grow: 1;
-    justify-content: center;
-  }
-
   .menu {
     flex-direction: row;
     gap: 50px;
@@ -349,73 +562,15 @@ footer a {
     white-space: nowrap;
   }
 
-  .icons {
-    display: flex;
-  }
-
-  .icons ul {
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    align-items: center;
-  }
-
-  .icons li button {
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color: transparent;
-    border: 1px solid white;
-    color: #fff;
-    cursor: pointer;
-    font-size: 15px;
-  }
-
-  .icons li a {
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-  }
-  .intro-container {
-    padding: 30px 0px;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-  }
-
-  .intro-container .content h2 {
-    font-size: 3.3rem;
-    padding-bottom: 20px;
-  }
-
   .content-image img {
-    max-width: 700px;
-    height: 450px;
+    max-width: 500px;
+  }
+  .content-mobielebottom-image {
+    padding-top: 20px;
   }
 
-  .image img {
-    max-width: 100%;
-  }
-
-  .content-image {
-    position: relative;
-    z-index: 3;
-  }
-
-  .content-image .content-image-pattern img {
-    position: absolute;
-    top: 30px;
-    left: 0px;
-    object-position: center;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    display: block;
-    transform: rotate(32.96deg);
-  }
-
-  .cards-container {
-    grid-template-columns: repeat(3, 1fr);
+  .card h3 {
+    font-size: 30px;
   }
 
   .card.second {
@@ -429,11 +584,195 @@ footer a {
 
   .footer-container .logo-container p {
     width: 340px;
-  
+  }
+}
+@media screen and (min-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 @media screen and (min-width: 1024px) {
-  .footer-container {
-    grid-template-columns: repeat(5, 1fr);
+  .menu-toggle {
+    display: none;
+  }
+
+  .icons {
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 0px;
+  }
+
+  .main-menu-container {
+    position: static;
+    opacity: 1;
+    transform: scale(1);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .menu-container ul {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding: 0;
+  }
+  .icons ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logo img {
+    width: 80px;
+    height: auto;
+  }
+  header {
+    padding: 25px 20px;
+  }
+  .logo {
+    margin-right: 60px;
+    padding-right: 30px;
+  }
+
+  .intro-container {
+    padding: 20px 0px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .intro-section {
+    max-width: initial;
+    margin: 0 auto;
+  }
+
+  .content-mobielebottom-image,
+  .content-image .content-image-pattern {
+    display: none;
+  }
+  .image {
+    display: block;
+  }
+  .intro-container {
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  .content-image .first .desktop-image {
+    display: block;
+    max-width: 100%;
+    width: 900px;
+    height: 500px;
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  .content-image .first .mobile-image {
+    display: none;
+  }
+
+  .intro-container .content h2 {
+    font-size: 3rem;
+    padding: 0px 0px 20px 0px;
+  }
+
+  .content-image img {
+    max-width: 700px;
+    height: 450px;
+  }
+
+  .image img {
+    max-width: 100%;
+  }
+
+  .tab-content {
+    padding-top: 40px;
+  }
+
+  .tab-content .mobile-cards {
+    display: none;
+  }
+  #tab2 {
+    display: none;
+  }
+
+  .tab-content .desktop-cards {
+    display: block;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+
+  #tab1 .desktop-cards p {
+    font-size: 15.6px;
+    font-weight: 200;
+  }
+
+  #tab1 .desktop-cards .card.first {
+    background-color: transparent;
+    color: #fff;
+  }
+  #tab1 .desktop-cards .card {
+    background-color: #fff;
+    color: #0d4036;
+  }
+
+  #tab1 .desktop-cards .card button {
+    background-color: #fff;
+    color: #0d4036;
+    border: 1px solid #0d4036;
+  }
+
+  #tab1 .desktop-cards .card.first button {
+    background-color: #fff;
+    color: #0d4036;
+    border: none;
+  }
+
+  #tab1 .desktop-cards .card.second {
+    background-color: #0d4036;
+    color: #fff;
+  }
+  #tab1 .desktop-cards .card.second button {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  .tab-buttons {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .intro-container {
+    gap: 10px;
+    padding: 40px 30px;
+  }
+  .image {
+    /* border: 1px solid red; */
+    max-width: 600px;
+  }
+  .content-image img {
+    max-width: initial;
+  }
+  .intro-container {
+    overflow: initial;
+  }
+
+  .content-image {
+    /* position: relative;
+    max-width: 1200px;
+    min-height: 600px;
+    border: 1px solid red; */
+  }
+  .content-image .first .desktop-image {
+    /* position: absolute;
+    top: 0px;
+    left: 0px;
+    object-position: center;
+    width: 100%;
+    height: 100%; */
   }
 }

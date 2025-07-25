@@ -8,11 +8,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
 
-    
-
     <!-- donald@p23africa.com -->
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
     <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
   </head>
@@ -21,72 +19,74 @@
       <nav>
         <div class="nav-container">
           <div class="logo">
-            <img src="./assets/Logo (1).png" alt="" />
+            <img src="./assets/images/Logo.png" alt="" />
           </div>
 
+          <div class="main-menu-container">
+            <div class="menu-container">
+              <ul class="menu">
+                <li>
+                  <a href="#">Who we are</a>
+                </li>
+                <li>
+                  <a href="#">What we do </a>
+                </li>
+                <li>
+                  <a href="#">Our Evemts</a>
+                </li>
+                <li>
+                  <a href="#">Resources Hub</a>
+                </li>
+                <li>
+                  <a href="#">Let's Collaborate</a>
+                </li>
+              </ul>
+            </div>
 
-          <div class="menu-container">
-            <ul class="menu">
-              <li>
-                <a href="#">Who we are</a>
-              </li>
-              <li>
-                <a href="#">What we do </a>
-              </li>
-              <li>
-                <a href="#">Our Evemts</a>
-              </li>
-              <li>
-                <a href="#">Resources Hub</a>
-              </li>
-              <li>
-                <a href="#">Let's Collaborate</a>
-              </li>
-            </ul>
+            <!-- Social icons -->
+
+            <div class="icons">
+              <ul>
+                <li>
+                  <a href="">
+                    <button>Subscribe</button>
+                  </a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="./assets/images/Linkedin.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/images/FB.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/images/instagram.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/images/Youtube.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <!-- Social icons -->
-
-          <div class="icons">
-            <ul>
-              <li>
-                <a href="">
-                  <button>Subscribe</button>
-                </a>
-              </li>
-
-              <li>
-                <a href="">
-                  <i class="bi bi-linkedin"></i>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <i class="bi bi-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <i class="bi bi-instagram"></i>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <i class="bi bi-youtube"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <button class="menu-toggle" >
-            <i class="bi bi-list"></i>
+          <button class="menu-toggle">
+            <img src="./assets/images/harmnurger.png" alt="" />
           </button>
         </div>
       </nav>
     </header>
 
     <!-- Intro Section -->
-
     <section class="intro-section">
       <div class="container">
         <div class="intro-container">
@@ -94,17 +94,30 @@
             <img src="./assets/intro1.png" alt="" />
           </div>
 
-          <div class="content" data-aos="fade-left" data-aos-delay="1500">
-            <h2 data-aos="fade-up" data-aos-delay="2000">
-              Gaining Knowledge <span>Through Connection.</span>
-            </h2>
+          <div class="content">
+            <h2>Gaining Knowledge <span>Through Connection.</span></h2>
 
             <div class="content-image">
-              <div class="content-image-pattern">
-                <img  src="./assets/elipse-intro.png" alt="" />
+              <div class="first">
+                <img
+                  class="mobile-image"
+                  src="./assets/images/mobile.png"
+                  alt=""
+                />
+                <img
+                  class="desktop-image"
+                  src="./assets/images/intro2.png"
+                  alt=""
+                />
               </div>
-              <img src="./assets/intro2.png" alt="" />
-            </div> 
+              <div class="content-image-pattern">
+                <img src="./assets/elipse-intro.png" alt="" />
+              </div>
+            </div>
+
+            <div class="content-mobielebottom-image">
+              <img src="./assets/images/intro-down.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -113,148 +126,395 @@
     <section class="card-section">
       <div class="container">
         <div class="cards-container">
-          <div class="card first">
-            <h3>Upcoming Event for the year</h3>
-
-            <p>
-              Explore upcoming events tailored to equip, connect, and empower
-              businesses across Africa and beyond.
-            </p>
-
-            <a href="">
-              <button>
-                See All Events <img src="./assets/arrow-colored.png" alt="" />
-              </button>
-            </a>
-          </div>
-          <div class="card second">
-            <div class="card-title">
-              <img src="./assets/calendar.png" alt="" />
-              <h3>Vision & Execution</h3>
+          <div class="tabs">
+            <div class="tab-buttons">
+              <button class="tab-btn active" data-tab="tab1">All Events</button>
+              <button class="tab-btn" data-tab="tab2">BRN Only</button>
             </div>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <div class="tab-content active" id="tab1">
+              <div class="mobile-cards">
+                <div class="card">
+                  <div class="card-title">
+                    <img src="./assets/calendar.png" alt="" />
+                    <h3>Event Name</h3>
+                  </div>
 
-            <div>
-              <a href="">
-                <button>
-                  Book a Seat <img src="./assets/arrow-colored.png" alt="" />
-                </button>
-              </a>
-              <a href="">
-                <button>
-                  Events Details<img src="./assets/arrow-white.png" alt="" />
-                </button>
-              </a>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+
+                  <div>
+                    <a href="">
+                      <button>
+                        Book a Seat
+                        <img src="./assets/images/arrow-new.png" alt="" />
+                      </button>
+                    </a>
+                    <a href="">
+                      <button>
+                        Events Details
+                        <img src="./assets/images/arrow-new.png" alt="" />
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-title">
+                    <img src="./assets/calendar.png" alt="" />
+                    <h3>Event Name</h3>
+                  </div>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+
+                  <div>
+                    <a href="">
+                      <button>
+                        Book a Seat
+                        <img src="./assets/images/arrow-new.png" alt="" />
+                      </button>
+                    </a>
+                    <a href="">
+                      <button>
+                        Events Details
+                        <img src="./assets/images/arrow-new.png" alt="" />
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-title">
+                    <img src="./assets/calendar.png" alt="" />
+                    <h3>Event Name</h3>
+                  </div>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+
+                  <div>
+                    <a href="">
+                      <button>
+                        Book a Seat
+                        <img src="./assets/images/arrow-new.png" alt="" />
+                      </button>
+                    </a>
+                    <a href="">
+                      <button>
+                        Events Details
+                        <img src="./assets/images/arrow-new.png" alt="" />
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-title">
+                    <img src="./assets/calendar.png" alt="" />
+                    <h3>Event Name</h3>
+                  </div>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+
+                  <div>
+                    <a href="">
+                      <button>
+                        Book a Seat
+                        <img src="./assets/arrow-colored.png" alt="" />
+                      </button>
+                    </a>
+                    <a href="">
+                      <button>
+                        Events Details
+                        <img src="./assets/images/arrow-new.png" alt="" />
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="desktop-cards">
+                <div class="card first">
+                  <h3>Upcoming Event for the year</h3>
+
+                  <p>
+                    Explore upcoming events tailored to equip, connect, and
+                    empower businesses across Africa and beyond.
+                  </p>
+
+                  <a href="">
+                    <button>
+                      See All Events
+                      <img src="./assets/arrow-colored.png" alt="" />
+                    </button>
+                  </a>
+                </div>
+                <div class="card second">
+                  <div class="card-title">
+                    <img src="./assets/calendar.png" alt="" />
+                    <h3>Vision & Execution</h3>
+                  </div>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+
+                  <div>
+                    <a href="">
+                      <button>
+                        Book a Seat
+                        <img src="./assets/arrow-white.png" alt="" />
+                      </button>
+                    </a>
+                    <a href="">
+                      <button>
+                        Events Details
+                        <img src="./assets/arrow-white.png" alt="" />
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-title">
+                    <img src="./assets/vector2.png" alt="" />
+                    <h3>Event Name</h3>
+                  </div>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+
+                  <div>
+                    <a href="">
+                      <button>
+                        Book a Seat
+                        <img src="./assets/arrow-colored.png" alt="" />
+                      </button>
+                    </a>
+                    <a href="">
+                      <button>
+                        Events Details
+                        <img src="./assets/arrow-colored.png" alt="" />
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-title">
+                    <img src="./assets/vector2.png" alt="" />
+                    <h3>Event Name</h3>
+                  </div>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+
+                  <div>
+                    <a href="">
+                      <button>
+                        Book a Seat
+                        <img src="./assets/arrow-colored.png" alt="" />
+                      </button>
+                    </a>
+                    <a href="">
+                      <button>
+                        Events Details
+                        <img src="./assets/arrow-colored.png" alt="" />
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-title">
+                    <img src="./assets/vector2.png" alt="" />
+                    <h3>Event Name</h3>
+                  </div>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+
+                  <div>
+                    <a href="">
+                      <button>
+                        Book a Seat
+                        <img src="./assets/arrow-colored.png" alt="" />
+                      </button>
+                    </a>
+                    <a href="">
+                      <button>
+                        Events Details
+                        <img src="./assets/arrow-colored.png" alt="" />
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-title">
+                    <img src="./assets/vector2.png" alt="" />
+                    <h3>Event Name</h3>
+                  </div>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+
+                  <div>
+                    <a href="">
+                      <button>
+                        Book a Seat
+                        <img src="./assets/arrow-colored.png" alt="" />
+                      </button>
+                    </a>
+                    <a href="">
+                      <button>
+                        Events Details
+                        <img src="./assets/arrow-colored.png" alt="" />
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-title">
-              <img src="./assets/vector2.png" alt="" />
-              <h3>Event Name</h3>
-            </div>
+            <div class="tab-content" id="tab2">
+              <div class="card">
+                <div class="card-title">
+                  <img src="./assets/vector2.png" alt="" />
+                  <h3>Event Name</h3>
+                </div>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
 
-            <div>
-              <a href="">
-                <button>
-                  Book a Seat <img src="./assets/arrow-colored.png" alt="" />
-                </button>
-              </a>
-              <a href="">
-                <button>
-                  Events Details<img src="./assets/arrow-colored.png" alt="" />
-                </button>
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-title">
-              <img src="./assets/vector2.png" alt="" />
-              <h3>Event Name</h3>
-            </div>
+                <div>
+                  <a href="">
+                    <button>
+                      Book a Seat
+                      <img src="./assets/arrow-colored.png" alt="" />
+                    </button>
+                  </a>
+                  <a href="">
+                    <button>
+                      Events Details<img
+                        src="./assets/arrow-colored.png"
+                        alt=""
+                      />
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-title">
+                  <img src="./assets/vector2.png" alt="" />
+                  <h3>Event Name</h3>
+                </div>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
 
-            <div>
-              <a href="">
-                <button>
-                  Book a Seat <img src="./assets/arrow-colored.png" alt="" />
-                </button>
-              </a>
-              <a href="">
-                <button>
-                  Events Details<img src="./assets/arrow-colored.png" alt="" />
-                </button>
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-title">
-              <img src="./assets/vector2.png" alt="" />
-              <h3>Event Name</h3>
-            </div>
+                <div>
+                  <a href="">
+                    <button>
+                      Book a Seat
+                      <img src="./assets/arrow-colored.png" alt="" />
+                    </button>
+                  </a>
+                  <a href="">
+                    <button>
+                      Events Details<img
+                        src="./assets/arrow-colored.png"
+                        alt=""
+                      />
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-title">
+                  <img src="./assets/vector2.png" alt="" />
+                  <h3>Event Name</h3>
+                </div>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
 
-            <div>
-              <a href="">
-                <button>
-                  Book a Seat <img src="./assets/arrow-colored.png" alt="" />
-                </button>
-              </a>
-              <a href="">
-                <button>
-                  Events Details<img src="./assets/arrow-colored.png" alt="" />
-                </button>
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-title">
-              <img src="./assets/vector2.png" alt="" />
-              <h3>Event Name</h3>
-            </div>
+                <div>
+                  <a href="">
+                    <button>
+                      Book a Seat
+                      <img src="./assets/arrow-colored.png" alt="" />
+                    </button>
+                  </a>
+                  <a href="">
+                    <button>
+                      Events Details<img
+                        src="./assets/arrow-colored.png"
+                        alt=""
+                      />
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-title">
+                  <img src="./assets/vector2.png" alt="" />
+                  <h3>Event Name</h3>
+                </div>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
 
-            <div>
-              <a href="">
-                <button>
-                  Book a Seat <img src="./assets/arrow-colored.png" alt="" />
-                </button>
-              </a>
-              <a href="">
-                <button>
-                  Events Details<img src="./assets/arrow-colored.png" alt="" />
-                </button>
-              </a>
+                <div>
+                  <a href="">
+                    <button>
+                      Book a Seat
+                      <img src="./assets/arrow-colored.png" alt="" />
+                    </button>
+                  </a>
+                  <a href="">
+                    <button>
+                      Events Details<img
+                        src="./assets/arrow-colored.png"
+                        alt=""
+                      />
+                    </button>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -346,7 +606,7 @@
             <div>
               <form action="">
                 <div>
-                  <input type="Enter Your email" />
+                  <input type="Enter Your email" placeholder="Enter your email" />
                 </div>
 
                 <div>
@@ -370,9 +630,5 @@
     </footer>
 
     <script src="./script.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>
