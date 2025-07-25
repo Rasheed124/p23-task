@@ -360,7 +360,7 @@ img {
   height: 0;
   overflow: hidden;
   transition: opacity 0.5s ease, visibility 0.5s, height 0.5s ease;
-  margin: 30px 30px;
+  margin: 20px 30px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 30px;
@@ -372,6 +372,7 @@ img {
   gap: 30px;
 }
 .tab-content .desktop-cards {
+
   display: none;
 }
 
