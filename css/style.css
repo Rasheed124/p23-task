@@ -109,6 +109,11 @@ img {
   margin: 0 auto;
   padding: 2px;
 }
+.main-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2px;
+}
 
 .nav-container {
   display: flex;
@@ -789,5 +794,12 @@ footer a {
     object-position: center;
     width: 100%;
     height: 100%; */
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .container{
+    max-width: 1500px;
+    margin: 0 auto;
   }
 }
