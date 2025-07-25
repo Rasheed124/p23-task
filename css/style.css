@@ -422,6 +422,7 @@ img {
   color: #fff;
   border: 1px solid #fff;
   outline: none;
+  white-space: nowrap;
 }
 .cards-container #tab1 .card div a:last-of-type button {
   border: none;
