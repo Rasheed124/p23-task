@@ -390,7 +390,7 @@ img {
 }
 .tab-content .mobile-cards .card .card-title img {
   rotate: 5deg;
-} 
+}
 .tab-content .desktop-cards {
   display: none;
 }
@@ -522,8 +522,7 @@ img {
   color: #fff;
   font-weight: 300;
   margin-top: 20px;
-  font-family: "GT Walsheim Con";
-  font-weight: 200;
+font-family: "GT Walsheim Trial Cn Lt";
 }
 .footer-container {
   display: grid;
@@ -556,13 +555,12 @@ footer a {
   margin-bottom: 10px;
   line-height: 27px;
 }
-.mobile-footer  .mobile-form div{
+.mobile-footer .mobile-form div {
   position: relative;
   overflow: hidden;
 }
 
-.mobile-footer  .mobile-form div button {
-
+.mobile-footer .mobile-form div button {
   position: absolute;
   top: 0;
   right: 0;
@@ -570,22 +568,20 @@ footer a {
   background-color: #cced60;
   border: 0;
   outline: none;
-  border-top-right-radius:10px;
-  border-bottom-right-radius:10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   font-size: 18px;
   font-weight: bold;
-  
 }
 
-.mobile-footer  .mobile-form div input {
+.mobile-footer .mobile-form div input {
   background-color: #fff;
   color: #000;
   padding-right: 36%;
 }
 .footer-container form.mobile-form input::placeholder {
-  color: #0d4036
+  color: #0d4036;
 }
-
 
 .footer-container form input {
   padding: 10px 20px;
@@ -604,7 +600,7 @@ footer a {
   opacity: 0.5; /* make sure it's not transparent */
 }
 
-.footer-container .fourth-widget form  button {
+.footer-container .fourth-widget form button {
   padding: 16px 30px;
   background-color: #cced60;
   color: #0d4036;
@@ -664,10 +660,6 @@ footer a {
 .fourth-widget {
   display: none;
 }
-
-
-
-
 
 @media screen and (min-width: 768px) {
   .menu {
@@ -777,6 +769,7 @@ footer a {
   .intro-section {
     max-width: initial;
     margin: 0 auto;
+    padding-top: 30px;
   }
 
   .content-mobielebottom-image,
@@ -853,11 +846,22 @@ footer a {
   .content-image .first .desktop-image {
     display: block;
     max-width: 100%;
-    width: 900px;
-    height: 500px;
+    /* width: 900px;
+    height: 500px; */
     position: relative;
     top: 0px;
     right: 0px;
+  }
+  .image {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image img {
+    width: 513px;
+    height: 686px;
+    margin-left: -95px;
   }
 
   .content-image .first .mobile-image {
@@ -919,8 +923,9 @@ footer a {
     color: #fff;
   }
   #tab1 .desktop-cards .card.first p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 22px;
+    /* display: none; */
   }
   #tab1 .desktop-cards .card {
     background-color: #fff;
@@ -967,10 +972,11 @@ footer a {
     gap: 10px;
     padding: 40px 30px;
     overflow: hidden;
+    border: 1px solid red;
   }
   .image {
-    max-width: 600px;
-    margin-left: 95px;
+    /* max-width: 800px; */
+    /* margin-left: 95px; */
   }
 
   .intro-container .content {
