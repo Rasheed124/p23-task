@@ -773,6 +773,10 @@ footer a {
     margin-right: 60px;
     padding-right: 30px;
   }
+  .logo img{
+    width: 80px;
+    height: auto;
+  }
 
   .intro-container {
     padding: 20px 0px;
@@ -855,7 +859,9 @@ footer a {
   .intro-container {
     overflow-y: hidden;
     overflow-x: auto;
+    gap: 0px;
   }
+
 
   .content-image .first .desktop-image {
     display: block;
@@ -869,14 +875,15 @@ footer a {
   .image {
     /* border: 1px solid red; */
     display: flex;
-    justify-content: end;
-    align-items: end;
+    justify-content: center;
+    align-items: center ;
+    margin-right: -75px;
   }
 
   .image img {
-    max-width: 500px;
-    width: 82%;
-    max-height: 680px;
+    max-width: 100%;
+    /* width: 80%; */
+    max-height: 700px;
     /* height: 500px; */
   }
 
@@ -886,6 +893,7 @@ footer a {
 
   .intro-container .content {
     padding-top: 33px;
+    /* margin-left: -60px; */
   }
 
   .intro-container .content h2 {
@@ -1056,11 +1064,11 @@ footer a {
   }
   .image {
     max-width: 800px;
-    margin-left: 95px;
+    /* margin-left: 95px; */
   }
 
   .intro-container .content-image {
-    margin-right: -50px;
+    /* margin-right: -50px; */
   }
 
   .content-image img {
