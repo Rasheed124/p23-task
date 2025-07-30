@@ -522,7 +522,7 @@ img {
   color: #fff;
   font-weight: 300;
   margin-top: 20px;
-font-family: "GT Walsheim Trial Cn Lt";
+  font-family: "GT Walsheim Trial Cn Lt";
 }
 .footer-container {
   display: grid;
@@ -629,11 +629,12 @@ footer a {
 }
 .bootom-footer ul {
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 .bootom-footer ul li {
   font-weight: 200;
   white-space: nowrap;
+  font-weight: 400;
 }
 
 /* . */
@@ -711,8 +712,16 @@ footer a {
   }
 }
 @media screen and (min-width: 992px) {
+  .nav-container {
+    padding: 0px 65px;
+    max-width: 1300px;
+  }
+  .main-container {
+    padding: 0px 60px;
+  }
   .footer-container {
     grid-template-columns: repeat(5, 1fr);
+    padding: 0px 30px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -797,7 +806,7 @@ footer a {
   /* Fade Right */
   [data-aos="custom-fade-right"] {
     opacity: 1;
-    transform: translateX(-500px);
+    transform: translateX(-570px);
     transition: all 0.8s ease-out;
     visibility: visible;
   }
@@ -810,7 +819,7 @@ footer a {
   /* Fade In from Left */
   [data-aos="custom-fade-left"] {
     opacity: 1;
-    transform: translateX(680px);
+    transform: translateX(590px);
     transition: all 0.8s ease-out;
     visibility: visible;
   }
@@ -823,7 +832,7 @@ footer a {
   /* Fade In from Top to Down */
   [data-aos="custom-fade-down"] {
     opacity: 1;
-    transform: translateY(-108px); /* Slightly above */
+    transform: translateY(-160px); /* Slightly above */
     transition: all 0.8s ease-out;
     /* visibility: visible; */
   }
@@ -855,22 +864,29 @@ footer a {
   .image {
     /* border: 1px solid red; */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
+    align-items: end;
   }
+
   .image img {
-    width: 513px;
-    height: 686px;
-    margin-left: -95px;
+    max-width: 500px;
+    width: 82%;
+    max-height: 680px;
+    /* height: 500px; */
   }
 
   .content-image .first .mobile-image {
     display: none;
   }
 
+  .intro-container .content {
+    padding-top: 33px;
+  }
+
   .intro-container .content h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     padding: 0px 0px 20px 0px;
+    /* display: none; */
   }
 
   .content-image img {
@@ -914,13 +930,25 @@ footer a {
   }
 
   #tab1 .desktop-cards p {
-    font-size: 15.4px;
+    font-size: 14px;
     font-weight: 200;
+    font-family: "GT Walsheim Trial Cn Lt";
+  }
+  #tab1 .desktop-cards h3 {
+    font-size: 24px;
+    font-weight: 900;
+    font-family: "GT Walsheim ConB";
+
+    /* display: none; */
   }
 
   #tab1 .desktop-cards .card.first {
     background-color: transparent;
     color: #fff;
+  }
+  #tab1 .desktop-cards .card.first h3 {
+    font-size: 24px;
+    font-family: "GT Walsheim Con";
   }
   #tab1 .desktop-cards .card.first p {
     font-size: 18px;
@@ -936,6 +964,13 @@ footer a {
     background-color: #fff;
     color: #0d4036;
     border: 1px solid #0d4036;
+    font-family: "GT Walsheim Con";
+    font-size: 16px;
+  }
+  #tab1 .desktop-cards .card div > a:last-of-type button {
+    font-family: "GT Walsheim Trial Cn Lt";
+    /* font-family: "GT Walsheim Con"; */
+    /* font-size: 16px; */
   }
 
   #tab1 .desktop-cards .card.first button {
@@ -965,6 +1000,41 @@ footer a {
   .footer-container form > div.button button {
     display: flex;
   }
+
+  .footer-container {
+    font-family: "GT Walsheim ConL";
+  }
+
+  .footer-container ul li {
+    margin-bottom: -2px;
+  }
+  .footer-container ul {
+    margin-top: -10px;
+  }
+  .footer-container .logo-container p {
+    width: 300px;
+    /* display: none; */
+  }
+
+  .footer-container .fourth-widget h4 {
+    font-size: 20px;
+  }
+
+  .footer-container .fourth-widget form .button button {
+    border-radius: 10px;
+    font-size: 13px;
+    padding: 15px 20px;
+    font-family: "GT Walsheim Con";
+
+    font-weight: 500;
+  }
+
+
+
+  .bootom-footer ul{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    list-style: disc;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -975,19 +1045,16 @@ footer a {
     border: 1px solid red;
   }
   .image {
-    /* max-width: 800px; */
-    /* margin-left: 95px; */
+    max-width: 800px;
+    margin-left: 95px;
   }
 
-  .intro-container .content {
+  .intro-container .content-image {
     margin-right: -50px;
   }
 
-  .intro-container .content h2 {
-    max-width: 600px;
-  }
   .content-image img {
-    max-width: initial;
+    /* max-width: initial; */
   }
   .intro-container {
     overflow: initial;
