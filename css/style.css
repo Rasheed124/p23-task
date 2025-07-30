@@ -1034,6 +1034,7 @@ footer a {
   .bootom-footer ul{
     font-family: Georgia, "Times New Roman", Times, serif;
     list-style: disc;
+    padding-top: 50px;
   }
 }
 
