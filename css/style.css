@@ -870,7 +870,7 @@ footer a {
   /* Fade In from Top to Down */
   [data-aos="custom-fade-down"] {
     opacity: 1;
-    transform: translateY(-160px); /* Slightly above */
+    transform: translateY(-170px); /* Slightly above */
     transition: all 0.8s ease-out;
     /* visibility: visible; */
   }
