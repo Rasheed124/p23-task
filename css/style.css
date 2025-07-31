@@ -401,23 +401,19 @@ img {
 }
 
 .tab-content {
-  /* padding: 15px; */
   opacity: 0;
   visibility: hidden;
   height: 0;
   overflow: hidden;
   transition: opacity 0.5s ease, visibility 0.5s, height 0.5s ease;
-  /* margin: 25px 15px; */
   display: grid;
   place-content: start;
   place-items: start;
   grid-template-columns: repeat(1, 1fr);
   gap: 30px;
-  /* padding: 20px; */
 }
-.tabs .tab-content#tab1,
-.tab-content#tab2 {
-  /* padding: 20px; */
+.tab-content .mobile-cards,  #tab2{
+  padding: 0px 20px;
 }
 
 .tab-content button {
@@ -455,6 +451,7 @@ img {
   visibility: visible;
   height: auto;
 }
+
 
 .cards-container .card {
   padding: 20px;
