@@ -498,10 +498,12 @@ img {
   border: 1px solid #0d4036;
   outline: none;
 }
+
+  
 .cards-container #tab2 .card {
   background-color: #fff;
   color: #0d4036;
-  padding: 30px 20px;
+  padding: 30px 15px;
 }
 
 .cards-container #tab2 .card div a button {
@@ -509,6 +511,9 @@ img {
 }
 .cards-container #tab2 .card div a:last-of-type button {
   font-weight: 400;
+}
+.cards-container #tab2 .card div a:first-of-type button img {
+ /* margin-right: 6px; */
 }
 
 .card p {
