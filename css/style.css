@@ -410,7 +410,7 @@ img {
   place-content: start;
   place-items: start;
   grid-template-columns: repeat(1, 1fr);
-  gap: 30px;
+  gap: 50px;
 }
 .tab-content .mobile-cards,  #tab2{
   padding: 25px 20px;
@@ -427,7 +427,12 @@ img {
 .tab-content .mobile-cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 30px;
+  gap: 50px;
+}
+
+#tabs{
+  /* gap: 50px; */
+
 }
 
 .tab-content .mobile-cards .card .card-title img {
