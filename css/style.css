@@ -437,7 +437,7 @@ img {
 .tab-content .mobile-cards .card p {
   font-size: 14px;
   font-family: "GT Walsheim Trial Cn Lt";
-  padding-right: 30px;
+  padding-right: 10px;
   font-weight: 400;
 }
 .tab-content .mobile-cards .card div a button {
@@ -515,8 +515,8 @@ img {
   font-family: "GT Walsheim Trial Cn Lt";
   font-family: 200;
   line-height: 25px;
-  font-size: 14px;
-  /* padding-right: 40px; */
+  font-size: 13px;
+  /* padding-right: 10px; */
 }
 
 .card button {
