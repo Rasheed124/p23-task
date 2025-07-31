@@ -413,7 +413,11 @@ img {
   gap: 30px;
 }
 .tab-content .mobile-cards,  #tab2{
-  padding: 0px 20px;
+  padding: 25px 20px;
+}
+#tab2{
+  padding: 25px 26px;
+  /* padding: 20px  */
 }
 
 .tab-content button {
