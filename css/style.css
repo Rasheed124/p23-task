@@ -413,13 +413,14 @@ img {
   place-items: start;
   grid-template-columns: repeat(1, 1fr);
   gap: 30px;
-    padding: 20px;
+  /* padding: 20px; */
 }
-.tabs .tab-content#tab1, .tab-content#tab2 {
+.tabs .tab-content#tab1,
+.tab-content#tab2 {
   /* padding: 20px; */
 }
 
-.tab-content button{
+.tab-content button {
   white-space: nowrap;
 }
 
@@ -433,13 +434,13 @@ img {
   rotate: 5deg;
 }
 
-.tab-content .mobile-cards .card p{
+.tab-content .mobile-cards .card p {
   font-size: 14px;
-    font-family: "GT Walsheim Trial Cn Lt";
-    padding-right: 30px;
-    font-weight: 400;
+  font-family: "GT Walsheim Trial Cn Lt";
+  padding-right: 30px;
+  font-weight: 400;
 }
-.tab-content .mobile-cards .card div a button{
+.tab-content .mobile-cards .card div a button {
   text-transform: capitalize;
 }
 .tab-content .mobile-cards .card div a:last-of-type button {
@@ -485,8 +486,8 @@ img {
 .cards-container #tab1 .card div a:last-of-type button {
   border: none;
 }
-.cards-container #tab2{
-  padding: 0px 40px 0px 30px;
+.cards-container #tab2 {
+  /* padding: 0px 40px 0px 30px; */
 }
 .cards-container #tab2 .card div a:last-of-type button {
   border: none;
@@ -502,10 +503,10 @@ img {
   padding: 30px 20px;
 }
 
-.cards-container #tab2 .card div a button{
+.cards-container #tab2 .card div a button {
   text-transform: capitalize;
 }
-.cards-container #tab2 .card div a:last-of-type button{
+.cards-container #tab2 .card div a:last-of-type button {
   font-weight: 400;
 }
 
@@ -727,12 +728,19 @@ footer a {
   place-content: start;
   place-items: start;
 }
+
+.mobile-footer > div {
+}
+
 .mobile-footer > div:nth-child(2) {
-  margin-left: -50px;
+  margin-left: -80px;
 }
 
 .mobile-footer .logo-container {
   max-width: 200px;
+}
+.mobile-footer .logo-container p {
+  font-size: 15px;
 }
 
 .footer-container .mobile-footer + .logo-container,
@@ -1008,7 +1016,8 @@ footer a {
   }
 
   .tab-content {
-    padding-top: 40px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 
   .tab-content .mobile-cards {
