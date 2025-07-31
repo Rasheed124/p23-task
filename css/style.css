@@ -508,6 +508,7 @@ img {
 
 .cards-container #tab2 .card div a button {
   text-transform: capitalize;
+  padding: 15px 20px 15px 16px;
 }
 .cards-container #tab2 .card div a:last-of-type button {
   font-weight: 400;
