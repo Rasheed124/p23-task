@@ -465,11 +465,11 @@ img {
 .cards-container .card {
   padding: 20px;
 box-shadow: 
-  0 0 1px rgba(0, 0, 0, 0.25),   /* general blur around */
-  0 8px 8px rgba(0, 0, 0, 0.25), /* bottom shadow */
-  0 -8px 8px rgba(0, 0, 0, 0.25),/* top shadow */
-  8px 0 8px rgba(0, 0, 0, 0.25), /* right shadow */
-  -8px 0 8px rgba(0, 0, 0, 0.25) /* left shadow */;
+  0 0 0.5px rgba(0, 0, 0, 0.25),   /* general blur around */
+  0 4px 4px rgba(0, 0, 0, 0.25), /* bottom shadow */
+  0 -4px 4px rgba(0, 0, 0, 0.25),/* top shadow */
+  4px 0 4px rgba(0, 0, 0, 0.25), /* right shadow */
+  -4px 0 4px rgba(0, 0, 0, 0.25) /* left shadow */;
 
   display: flex;
   flex-direction: column;
