@@ -305,11 +305,11 @@ img {
   /* padding: 0px 0px 0px 0px ; */
 }
 .intro-container .content h2 {
-  padding: 0px 0px 20px 20px;
+  padding: 0px 0px 20px 30px;
   max-width: 400px;
   margin: 0 auto;
   color: #0d4036;
-  font-size: 2rem;
+  font-size: 1.9rem;
 
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
@@ -589,8 +589,9 @@ img {
   padding: 20px;
 }
 .main-container .mobile-first-card .first h3 {
-  letter-spacing: 0.2px;
+  letter-spacing: 0.7px;
   font-family: "GT Walsheim Con";
+  font-weight: 600;
 }
 .main-container .mobile-first-card p {
   padding-right: 26px;
