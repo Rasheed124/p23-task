@@ -412,10 +412,11 @@ img {
   grid-template-columns: repeat(1, 1fr);
   gap: 50px;
 }
-.tab-content .mobile-cards,  #tab2{
+.tab-content .mobile-cards,
+#tab2 {
   padding: 25px 20px;
 }
-#tab2{
+#tab2 {
   padding: 25px 26px;
   /* padding: 20px  */
 }
@@ -430,9 +431,8 @@ img {
   gap: 50px;
 }
 
-#tabs{
+#tabs {
   /* gap: 50px; */
-
 }
 
 .tab-content .mobile-cards .card .card-title img {
@@ -444,6 +444,7 @@ img {
   font-family: "GT Walsheim Trial Cn Lt";
   padding-right: 10px;
   font-weight: 400;
+  letter-spacing: 0.6px;
 }
 .tab-content .mobile-cards .card div a button {
   text-transform: capitalize;
@@ -461,18 +462,18 @@ img {
   height: auto;
 }
 
-
 .cards-container .card {
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),
-    /* general blur around */ 0 2px 4px rgba(0, 0, 0, 0.1),
-    /* bottom */ 0 -2px 4px rgba(0, 0, 0, 0.1),
-    /* top */ 2px -2px 4px rgba(0, 0, 0, 0.1),
-    /* right */ -2px 0 4px rgba(0, 0, 0, 0.1); /* left */
-  /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); */
+box-shadow: 
+  0 0 1px rgba(0, 0, 0, 0.25),   /* general blur around */
+  0 8px 8px rgba(0, 0, 0, 0.25), /* bottom shadow */
+  0 -8px 8px rgba(0, 0, 0, 0.25),/* top shadow */
+  8px 0 8px rgba(0, 0, 0, 0.25), /* right shadow */
+  -8px 0 8px rgba(0, 0, 0, 0.25) /* left shadow */;
+
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
   color: #0d4036;
   border-radius: 10px;
   font-family: "GT Walsheim Con";
@@ -504,7 +505,6 @@ img {
   outline: none;
 }
 
-  
 .cards-container #tab2 .card {
   background-color: #fff;
   color: #0d4036;
@@ -519,7 +519,7 @@ img {
   font-weight: 400;
 }
 .cards-container #tab2 .card div a:first-of-type button img {
- /* margin-right: 6px; */
+  /* margin-right: 6px; */
 }
 
 .card p {
@@ -598,13 +598,14 @@ img {
   font-size: 16px;
   letter-spacing: 0.7px;
   line-height: 22px;
-  font-family: "GT Walsheim Trial Cn Rg";
+  font-family: "GT Walsheim Trial Cn LT";
   font-weight: 200;
 }
 .main-container .mobile-first-card a button {
   font-weight: 400;
-  font-family: "GT Walsheim Trial Cn Rg";
-  font-size: 16px;
+  font-family: "GT Walsheim Trial Cn LT";
+  font-size: 14px;
+  padding: 16px 50px;
 }
 .main-container .mobile-first-card a button img {
   width: 15px;
@@ -1062,15 +1063,19 @@ footer a {
   #tab1 .desktop-cards .card.first {
     background-color: transparent;
     color: #fff;
+    gap: 15px;
+    
   }
   #tab1 .desktop-cards .card.first h3 {
     font-size: 21px;
     font-weight: 500;
+
     /* font-family: "GT Walsheim Con"; */
   }
   #tab1 .desktop-cards .card.first p {
     font-size: 18px;
     line-height: 22px;
+    margin-bottom: 15px;
     /* display: none; */
   }
   #tab1 .desktop-cards .card {
@@ -1095,6 +1100,7 @@ footer a {
     background-color: #fff;
     color: #0d4036;
     border: none;
+    font-weight: 100;
   }
 
   #tab1 .desktop-cards .card.second {
@@ -1209,13 +1215,14 @@ footer a {
     min-height: 600px;
     border: 1px solid red; */
   }
+  .content-image .first {
+    max-width: 900px;
+    position: relative;
+  }
   .content-image .first .desktop-image {
-    /* position: absolute;
-    top: 0px;
-    left: 0px;
-    object-position: center;
+    object-fit: cover;
     width: 100%;
-    height: 100%; */
+    width: 4000px;
   }
 }
 
