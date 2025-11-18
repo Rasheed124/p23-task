@@ -1,0 +1,276 @@
+
+/* General Body & Card Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f8f9; /* A light background to see the card */
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 550px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  /* Using a dark color for the main heading as seen in the image */
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.subtitle .line {
+  width: 45px;
+  height: 4px;
+  background-color: #137077; /* Active color */
+  border-radius: 2px;
+  margin-right: 12px;
+}
+
+.subtitle p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #888888; /* A subdued gray for the subtitle text */
+}
+
+/* 2. Description Section */
+.description {
+  margin: 30px 0;
+}
+
+.description p {
+  font-size: 16px;
+  color: #555555; /* Standard body text color */
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 3. Progress Stepper */
+.progress-stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns circles at the top */
+  position: relative;
+  margin-top: 10px;
+}
+
+/* This ::before pseudo-element creates the gray line */
+.progress-stepper::before {
+  content: "";
+  position: absolute;
+  top: 21px; /* (40px circle height + 2 * 3px border) / 2 = 23px. Fine-tuned to 21px */
+  left: 10%; /* Inset the line so it doesn't touch the edges */
+  right: 10%;
+  height: 4px;
+  background-color: #cfd0d0; /* Inactive line color */
+  z-index: 1; /* Places the line BEHIND the circles */
+  transform: translateY(-50%);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 130px; /* Gives each step a consistent width */
+  position: relative;
+  z-index: 2; /* Places the step IN FRONT of the line */
+}
+
+.step .circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+
+  /* Inactive State Styles */
+  background-color: #ececec; /* Inactive circle background */
+  border: 3px solid #cfd0d0; /* Inactive circle border */
+  color: #cfd0d0; /* Inactive number color */
+}
+
+.step .label {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  /* Inactive State Styles */
+  color: #cfd0d0; /* Inactive label color */
+}
+
+/* Active State Styles */
+.step.active .circle {
+  background-color: #137077; /* Active color */
+  border-color: #137077; /* Active color */
+  color: #ffffff; /* White number */
+}
+
+.step.active .label {
+  color: #137077; /* Active color */
+}
+
+/* Form Container Styling */
+.interest-form-container {
+  background-color: #137077; /* The dark teal background from the image */
+  padding: 45px 40px;
+  border-radius: 20px; /* Rounded corners for the entire form card */
+  max-width: 550px;
+  width: 100%;
+  /* A very subtle shadow to give it depth */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.interest-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Group (Label + Input/Select) */
+.interest-form-group {
+  margin-bottom: 25px; /* Spacing between form fields */
+}
+
+.interest-form-group:last-of-type {
+  margin-bottom: 40px; /* More space before the button */
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f0f0f0; /* Light color for labels against the dark background */
+  margin-bottom: 8px;
+}
+
+/* Input Field Styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px; /* More rounded than default */
+  background-color: rgba(255, 255, 255, 0.2); /* Translucent white for inputs */
+  color: #ffffff; /* White text for input values */
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  outline: none; /* Remove default focus outline */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Lighter placeholder text */
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 0.3); /* Slightly brighter on focus */
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5); /* Subtle white glow on focus */
+}
+
+/* Custom Select Styling */
+.interest-form-custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+select {
+  -webkit-appearance: none; /* Remove default browser styling for select */
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  padding-right: 45px; /* Make space for the custom arrow */
+}
+
+select:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Placeholder option for select */
+select option[value=""][disabled] {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Actual options */
+select option {
+  background-color: #137077; /* Dark teal for dropdown options */
+  color: #ffffff;
+  padding: 10px; /* Add some padding for better readability */
+}
+
+/* Custom Arrow for Select */
+.interest-form-select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid rgba(255, 255, 255, 0.8); /* White arrow */
+  pointer-events: none; /* Ensure clicks pass through to the select */
+  transition: border-top-color 0.3s ease;
+}
+
+select:focus + .interest-form-select-arrow {
+  border-top-color: #ffffff; /* Brighter arrow on focus */
+}
+
+/* Proceed Button Styling */
+.interest-form-proceed-button {
+  align-self: flex-end; /* Align to the right as in the image */
+  padding: 15px 30px;
+  background-color: #e2f091; /* A light, vibrant lime green for the button */
+  color: #4a6a00; /* A dark green for the button text, contrasting with the background */
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for button */
+}
+
+.interest-form-proceed-button:hover {
+  background-color: #d6e885; /* Slightly darker on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.interest-form-proceed-button:active {
+  background-color: #cedb7e; /* Even darker on click */
+  transform: translateY(0);
+}

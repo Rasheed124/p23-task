@@ -1,0 +1,616 @@
+@font-face {
+  font-family: "GT Walsheim Trial Cn Rg";
+  font-style: normal;
+  font-weight: normal;
+  src: local("./fonts/gt-trials/GT Walsheim Trial Cn Rg"),
+    url("GT-Walsheim-Condensed-Regular-Trial-BF651b7fc730eb2.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Md";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Md"),
+    url("./fonts/gt-trials/GT-Walsheim-Condensed-Medium-Trial-BF651b7fc70de01.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Bd";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Bd"),
+    url("./fonts/gt-trials/GT-Walsheim-Condensed-Bold-Trial-BF651b7fc7358e0.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Lt";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Lt"),
+    url("./fonts/gt-trials/GT-Walsheim-Condensed-Light-Trial-BF651b7fc73810c.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Rg";
+  font-style: normal;
+  font-weight: normal;
+  src: local("./fonts/gt-trials/GT Walsheim Trial Cn Rg"),
+    url("GT-Walsheim-Condensed-Regular-Trial-BF651b7fc730eb2.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim ProCB"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBlack.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBlack.woff")
+      format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Con"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-CondensedRegular.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff") format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim ProCB"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBlack.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBlack.woff")
+      format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Con"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-CondensedRegular.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff") format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Md";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Md"),
+    url("./fonts/gt-trials/GT-Walsheim-Condensed-Medium-Trial-BF651b7fc70de01.woff")
+      format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "GT Walsheim ProCB";
+}
+
+.container {
+  max-width: 1204px;
+  margin: 0 auto;
+}
+
+.intro-sales {
+  padding: 2rem 2.5rem 2rem 1.9rem;
+  background-image: url("./img/first-bg.png");
+  background-repeat: repeat;
+  background-size: contain;
+}
+.intro-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.intro-image.desktop {
+  display: none;
+}
+.intro-image img {
+  max-width: 100%;
+}
+
+.intro-image.mobile img {
+  margin-top: 15px;
+  margin-left: -6px;
+}
+
+.intro-content h1 {
+  font-size: 3.3rem;
+  color: #0d4036;
+  line-height: 1;
+  font-weight: 900;
+}
+.intro-content h1 span {
+  color: #52ccb4;
+}
+.intro-content p {
+  color: #0d4036;
+  margin: 0.8rem 0;
+  max-width: 19rem;
+  font-family: "GT Walsheim Con";
+  padding-right: 30px;
+
+  font-weight: 500;
+  line-height: 1.3;
+  font-size: 15px;
+}
+.intro-sales .cta-btn {
+  display: inline-block;
+  padding: 0.9rem 4rem;
+  background: #52ccb4;
+  font-family: "GT Walsheim Trial Cn Md";
+
+  /* font-weight: 500; */
+
+  color: #0d4036;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+  margin-top: 15px;
+}
+
+/* =========================================BOOK SECTION */
+
+.book-section {
+  padding: 3rem 1.5rem;
+  background-image: url("./img/second-bg.png");
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+.book-container {
+  text-align: center;
+  color: #0d4036;
+}
+
+.book-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 30px;
+}
+
+.book-header p {
+  max-width: 500px;
+  margin: 1rem auto 2rem;
+  padding: 0px 30px;
+  line-height: 1.3;
+  font-size: 20px;
+  vertical-align: middle;
+  font-family: "GT Walsheim Con";
+
+  font-weight: 400;
+}
+
+.book-cards {
+  display: grid;
+  gap: 0.1rem;
+  margin-top: 1.5rem;
+}
+
+.book-card {
+  overflow: hidden;
+}
+
+.book-card .card-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.book-card .card-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.book-section .closing-text {
+  max-width: 350px;
+  margin: 2.5rem auto 1.5rem;
+  font-size: 1.3rem;
+  padding: 0px 20px;
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+.book-section .cta-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #52ccb4;
+  color: #0d4036;
+  font-family: "GT Walsheim Trial Cn Md";
+
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 1.3rem;
+  box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* OVERLAY */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* ================================== Premium Section */
+
+.premium-section {
+  background-color: #fff;
+}
+
+.premium-section .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.premium-section .text-content {
+  text-align: center;
+  background-color: #e5ae56;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 25% 32px;
+  text-align: left;
+  margin: 40px 14px 13px 14px;
+}
+
+.premium-section .text-content-upper h2 {
+  font-size: 22px;
+  color: #0d4036;
+  padding-bottom: 20px;
+  padding-right: 30px;
+}
+
+.premium-section .info {
+  background-image: url("./img/last-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 90px 40px;
+}
+
+.premium-section .info h3 {
+  font-size: 32px;
+  color: #fff;
+  font-family: "GT Walsheim Trial Cn Bd";
+  margin-bottom: 30px;
+  padding-right: 20px;
+}
+.premium-section .info p {
+  font-size: 19px;
+  /* margin-top: 32px; */
+  color: #fff;
+  max-width: 260px;
+  font-family: "GT Walsheim Con";
+}
+
+.premium-section .learn-more {
+  display: inline-block;
+  margin-top: 0px;
+  background-color: #cced60;
+  color: #0d4036;
+  padding: 1.1rem 1.2rem;
+  text-decoration: none;
+  border-radius: 7px;
+  width: 95%;
+  border: 1px solid #cced60;
+  text-align: center;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+  font-family: "GT Walsheim Trial Cn Md";
+  transition: background-color 1s ease-in-out;
+  letter-spacing: 0.5px;
+}
+
+.premium-section .learn-more:hover {
+  background-color: #fff;
+  color: #0d4036;
+  border: 1px solid #0d4036;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .intro-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+  }
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    margin-left: 7%;
+  }
+  .intro-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro-image.desktop {
+    display: block;
+    margin-left: -7%;
+    overflow: hidden;
+  }
+
+  .intro-image.desktop img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  .intro-image.mobile {
+    display: none;
+  }
+
+  .premium-section .text-content {
+    padding: 7% 30px;
+    text-align: left;
+  }
+  /* =========================================BOOK SECTION */
+
+  .book-cards {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .book-cards {
+    max-width: initial;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .book-header p {
+    padding: 0px 15px;
+  }
+
+  .book-card .card-image {
+    width: 100%;
+    height: 270px;
+  }
+
+  .book-section .closing-text {
+    max-width: 450px;
+    font-size: 1rem;
+    padding: 0px 20px;
+  }
+
+  .book-section .cta-btn {
+    margin-top: 0.3rem;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  .premium-section .learn-more {
+    width: 50%;
+  }
+
+  .premium-section .text-content-upper {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .premium-section .info-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .premium-section .info p {
+    max-width: initial;
+  }
+  .premium-section .text-content-upper h2 {
+    padding: 0px 40px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 900px) {
+  .intro-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+  }
+
+  .intro-content h1 {
+    font-size: 3.7rem;
+    padding-right: 8px;
+  }
+
+  .intro-image.desktop {
+    max-width: 100%;
+    /* padding-right: 30%; */
+  }
+  .intro-image.desktop img {
+    /* margin-right: -80%; */
+    height: 100%;
+    width: 100%;
+  }
+
+  /* =========================================BOOK SECTION */
+  .book-card .card-image {
+    width: 100%;
+    height: 400px;
+  }
+
+
+  /* ==================================== PREMIUM SECTION */
+  .premium-section .content {
+    flex-direction: row;
+    padding: 20px;
+  }
+  .premium-section .text-content {
+    margin: 0px;
+    width: 480px;
+    padding: 40px 30px;
+    gap: 20px;
+  }
+
+  .premium-section .learn-more {
+    padding: 1.1rem 1.2rem;
+
+    width: 90%;
+  }
+  .premium-section .info {
+    width: 100%;
+  }
+  .premium-section .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+  .premium-section .info {
+    border-radius: 10px;
+    padding: 40px 50px;
+  }
+  .premium-section .info ul {
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro-content {
+    padding-left: 80px;
+  }
+
+  .intro-image.desktop {
+    max-width: 100%;
+    width: 500px;
+  }
+
+  .premium-section .text-content-upper {
+    max-width: initial;
+    margin: initial;
+    text-align: left;
+  }
+  .premium-section .info-container {
+    max-width: initial;
+    margin: initial;
+    text-align: left;
+  }
+  .premium-section .info p {
+    max-width: initial;
+  }
+  .premium-section .text-content-upper h2 {
+    padding: initial;
+    padding-bottom: 20px;
+  }
+
+  .premium-section .info h3 {
+    margin-bottom: 0px;
+    padding-right: 0px;
+  }
+
+  .premium-section .learn-more {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .intro-container {
+    transform: translateX(-40px);
+  }
+  .intro-content {
+    margin-left: 0%;
+    padding-top: 0rem;
+  }
+  .intro-content h1 {
+    font-size: 5.2rem;
+    padding-right: 0px;
+  }
+  .intro-content p {
+    /* font-size: 5.2rem; */
+    /* padding-right: 0px; */
+    max-width: 19rem;
+    font-size: 17px;
+    max-width: 26rem;
+    margin-top: 24px;
+  }
+
+  .intro-sales .cta-btn {
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+  }
+
+  .intro-image.desktop {
+    max-width: initial;
+    margin-left: 0%;
+    width: 50rem;
+    transform: translateX(-180px);
+  }
+  .intro-image.desktop img {
+    margin-top: 10px;
+  }
+
+  .book-section {
+    padding: 5rem 1.5rem;
+    background-image: url("./img/second-bg.png");
+    background-repeat: repeat;
+    background-size: contain;
+  }
+
+  .book-header h3 {
+    font-size: 1.26rem;
+  }
+  .book-header p {
+    max-width: 570px;
+    padding: 0px 40px;
+    line-height: 1;
+  }
+  .book-section .closing-text {
+    max-width: 640px;
+    font-size: 1.3rem;
+    letter-spacing: 0.2px;
+  }
+  .book-section .cta-btn {
+    padding: 1rem 3rem;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .premium-section .info {
+    padding: 60px;
+  }
+
+  .premium-section .info h3 {
+    font-size: 36px;
+  }
+
+  .premium-section .info p {
+    max-width: 300px;
+    font-weight: lighter;
+    letter-spacing: 0.3px;
+  }
+
+  .premium-section .info-container {
+    max-width: 600px;
+  }
+
+  .premium-section .text-content-upper h2 {
+    font-size: 19px;
+    padding-right: 30px;
+  }
+}

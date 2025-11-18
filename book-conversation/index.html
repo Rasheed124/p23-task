@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Step Form</title>
+    <style>
+      :root {
+        --color-dark-teal: #0d4036;
+        --color-light-lime: #a9cc3f;
+        --color-purple: #6b255d;
+        --color-background-light: #f7f7f7;
+        --color-text-dark: #333;
+      }
+
+      body {
+        background-color: var(--color-background-light);
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .book-conversation-container {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 900px;
+        padding: 0;
+        overflow: hidden; /* Ensures rounded corners are visible */
+      }
+
+      .book-conversation-step {
+        padding: 0;
+        display: none; /* Hidden by default */
+      }
+
+      .book-conversation-step--active {
+        display: block;
+      }
+
+      .book-conversation-step__header {
+        background-color: var(--color-dark-teal);
+        padding: 25px 40px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .book-conversation-step__number-container {
+        background-color: white;
+        border: 3px solid var(--color-light-lime);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .book-conversation-step__number {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: var(--color-dark-teal);
+      }
+
+      .book-conversation-step__header-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .book-conversation-step__progress-text {
+        color: white;
+        font-size: 0.9em;
+        margin: 0 0 5px 0;
+      }
+
+      .book-conversation-step__progress-bar {
+        width: 150px;
+        height: 6px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+      }
+
+      .book-conversation-step__progress-indicator {
+        height: 100%;
+        width: 0%; /* Default to 0, JS will update */
+        background-color: var(--color-light-lime);
+        border-radius: 3px;
+        transition: width 0.3s ease-in-out;
+      }
+
+      .book-conversation-step__content {
+        padding: 40px;
+      }
+
+      .book-conversation-step__title {
+        font-size: 1.8em;
+        color: var(--color-text-dark);
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      .book-conversation-step__subtitle {
+        color: #666;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .book-conversation-step__fields-group {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .book-conversation-step__column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .book-conversation-step__input,
+      .book-conversation-step__select,
+      .book-conversation-step__textarea {
+        width: 100%;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        font-size: 1em;
+        box-sizing: border-box;
+        transition: box-shadow 0.3s ease;
+        outline: none;
+        background-color: #fff;
+        resize: none;
+      }
+
+      .book-conversation-step__input:focus,
+      .book-conversation-step__select:focus,
+      .book-conversation-step__textarea:focus {
+        box-shadow: 0 0 0 2px var(--color-light-lime);
+      }
+
+      .book-conversation-step__select-wrapper {
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+      }
+
+      .book-conversation-step__select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        padding-right: 40px;
+      }
+
+      .book-conversation-step__select-wrapper::after {
+        content: "▼";
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: var(--color-text-dark);
+        font-size: 0.8em;
+      }
+
+      .book-conversation-step__textarea {
+        height: 100%;
+        min-height: 180px;
+      }
+
+      .book-conversation-step__actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 40px;
+        padding-bottom: 20px;
+      }
+
+      .book-conversation-step__button {
+        background-color: var(--color-purple);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+        box-shadow: 0 4px 15px rgba(107, 37, 93, 0.4);
+      }
+
+      .book-conversation-step__button:hover {
+        background-color: #8a347b;
+      }
+
+      .book-conversation-step__button-icon {
+        font-size: 1.5em;
+      }
+
+      /* Styling for the Goals Grid (Step 2) */
+      .book-conversation-step__goals-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-top: 30px;
+      }
+
+      .book-conversation-step__goal-card {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        position: relative;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .book-conversation-step__goal-card:hover {
+        border-color: var(--color-light-lime);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .book-conversation-step__goal-checkbox {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .book-conversation-step__goal-text {
+        flex-grow: 1;
+        color: var(--color-text-dark);
+        font-size: 0.95em;
+        line-height: 1.4;
+      }
+
+      .book-conversation-step__checkbox-icon {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        margin-left: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease;
+        flex-shrink: 0;
+      }
+
+      /* Checkmark styling for selected goal */
+      .book-conversation-step__goal-checkbox:checked
+        + .book-conversation-step__goal-text
+        + .book-conversation-step__checkbox-icon {
+        background-color: var(--color-light-lime);
+        border-color: var(--color-light-lime);
+      }
+
+      .book-conversation-step__goal-checkbox:checked
+        + .book-conversation-step__goal-text
+        + .book-conversation-step__checkbox-icon::before {
+        content: "✓";
+        color: var(--color-dark-teal);
+        font-size: 1.2em;
+        line-height: 1;
+        transform: translateY(1px);
+        background-color: transparent;
+      }
+
+      .book-conversation-step__goal-checkbox:checked
+        + .book-conversation-step__goal-text {
+        color: var(--color-dark-teal);
+        font-weight: 600;
+      }
+
+      /* Media Queries */
+      @media (min-width: 650px) {
+        .book-conversation-step__fields-group {
+          flex-direction: row;
+        }
+
+        .book-conversation-step__column {
+          flex: 1;
+        }
+
+        .book-conversation-step__column--left {
+          margin-right: 20px;
+        }
+
+        .book-conversation-step__textarea {
+          min-height: calc(4 * 50px + 3 * 20px - 10px);
+        }
+      }
+
+      @media (min-width: 768px) {
+        .book-conversation-step__goals-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .book-conversation-step__goals-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="multiStepForm" class="book-conversation-container">
+      <div
+        class="book-conversation-step book-conversation-step--active"
+        data-step="1"
+      >
+        <header class="book-conversation-step__header">
+          <div class="book-conversation-step__header-left">
+            <div class="book-conversation-step__number-container">
+              <span class="book-conversation-step__number">01</span>
+            </div>
+          </div>
+          <div class="book-conversation-step__header-right">
+            <p class="book-conversation-step__progress-text">01 of 04</p>
+            <div class="book-conversation-step__progress-bar">
+              <div
+                class="book-conversation-step__progress-indicator"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="book-conversation-step__content">
+          <h2 class="book-conversation-step__title">BUSINESS OVERVIEW</h2>
+          <p class="book-conversation-step__subtitle">
+            We use this info to better understand your business before the
+            session
+          </p>
+
+          <form class="book-conversation-step__form" id="step1Form">
+            <div class="book-conversation-step__fields-group">
+              <div
+                class="book-conversation-step__column book-conversation-step__column--left"
+              >
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  class="book-conversation-step__input"
+                  name="fullName"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Company/Brand Name"
+                  class="book-conversation-step__input"
+                  name="companyName"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Website or social media Handle"
+                  class="book-conversation-step__input"
+                  name="website"
+                />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="book-conversation-step__input"
+                  name="email"
+                  required
+                />
+              </div>
+
+              <div
+                class="book-conversation-step__column book-conversation-step__column--right"
+              >
+                <div class="book-conversation-step__select-wrapper">
+                  <select
+                    class="book-conversation-step__select"
+                    name="industry"
+                    required
+                  >
+                    <option value="" disabled selected>Industry</option>
+                    <option value="tech">Technology</option>
+                    <option value="creative">Creative Arts</option>
+                    <option value="retail">Retail</option>
+                  </select>
+                </div>
+                <textarea
+                  placeholder="Briefly describe what your business does (1-2 sentences)."
+                  class="book-conversation-step__textarea"
+                  name="businessDescription"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="book-conversation-step__actions">
+              <button
+                type="button"
+                class="book-conversation-step__button book-conversation-step__button--next"
+                onclick="nextStep()"
+              >
+                <span class="book-conversation-step__button-icon">&rarr;</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="book-conversation-step" data-step="2">
+        <header class="book-conversation-step__header">
+          <div class="book-conversation-step__header-left">
+            <div class="book-conversation-step__number-container">
+              <span class="book-conversation-step__number">02</span>
+            </div>
+          </div>
+          <div class="book-conversation-step__header-right">
+            <p class="book-conversation-step__progress-text">02 of 04</p>
+            <div class="book-conversation-step__progress-bar">
+              <div
+                class="book-conversation-step__progress-indicator"
+                style="width: 33.33%"
+              ></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="book-conversation-step__content">
+          <h2 class="book-conversation-step__title">CURRENT STAGE & GOALS</h2>
+          <p class="book-conversation-step__subtitle">
+            What are your current top goals? (Select up to 2)
+          </p>
+
+          <form class="book-conversation-step__form" id="step2Form">
+            <div class="book-conversation-step__goals-grid">
+              <label class="book-conversation-step__goal-card">
+                <input
+                  type="checkbox"
+                  name="goals"
+                  value="increase_revenue"
+                  class="book-conversation-step__goal-checkbox"
+                />
+                <span class="book-conversation-step__goal-text"
+                  >Increase revenue or sales</span
+                >
+                <span class="book-conversation-step__checkbox-icon"></span>
+              </label>
+              <label class="book-conversation-step__goal-card">
+                <input
+                  type="checkbox"
+                  name="goals"
+                  value="generate_leads"
+                  class="book-conversation-step__goal-checkbox"
+                />
+                <span class="book-conversation-step__goal-text"
+                  >Generate more leads</span
+                >
+                <span class="book-conversation-step__checkbox-icon"></span>
+              </label>
+              <label class="book-conversation-step__goal-card">
+                <input
+                  type="checkbox"
+                  name="goals"
+                  value="improve_brand_visibility"
+                  class="book-conversation-step__goal-checkbox"
+                />
+                <span class="book-conversation-step__goal-text"
+                  >Improve brand visibility</span
+                >
+                <span class="book-conversation-step__checkbox-icon"></span>
+              </label>
+              <label class="book-conversation-step__goal-card">
+                <input
+                  type="checkbox"
+                  name="goals"
+                  value="launch_new_product"
+                  class="book-conversation-step__goal-checkbox"
+                />
+                <span class="book-conversation-step__goal-text"
+                  >Launch a new product or service</span
+                >
+                <span class="book-conversation-step__checkbox-icon"></span>
+              </label>
+              <label class="book-conversation-step__goal-card">
+                <input
+                  type="checkbox"
+                  name="goals"
+                  value="expand_markets"
+                  class="book-conversation-step__goal-checkbox"
+                />
+                <span class="book-conversation-step__goal-text"
+                  >Expand into new markets</span
+                >
+                <span class="book-conversation-step__checkbox-icon"></span>
+              </label>
+              <label class="book-conversation-step__goal-card">
+                <input
+                  type="checkbox"
+                  name="goals"
+                  value="prepare_funding"
+                  class="book-conversation-step__goal-checkbox"
+                />
+                <span class="book-conversation-step__goal-text"
+                  >Prepare for funding or investor conversations</span
+                >
+                <span class="book-conversation-step__checkbox-icon"></span>
+              </label>
+              <label class="book-conversation-step__goal-card">
+                <input
+                  type="checkbox"
+                  name="goals"
+                  value="build_internal_systems"
+                  class="book-conversation-step__goal-checkbox"
+                />
+                <span class="book-conversation-step__goal-text"
+                  >Build internal systems or operational structure</span
+                >
+                <span class="book-conversation-step__checkbox-icon"></span>
+              </label>
+            </div>
+
+            <div class="book-conversation-step__actions">
+              <button
+                type="button"
+                class="book-conversation-step__button book-conversation-step__button--next"
+               
+              >
+                <span class="book-conversation-step__button-icon">&rarr;</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentStep = 1;
+      const totalSteps = 4;
+
+      // Initialize progress bar width for step 1
+      document.querySelector(
+        '.book-conversation-step[data-step="1"] .book-conversation-step__progress-indicator'
+      ).style.width = "0%";
+
+      function nextStep() {
+        const currentForm = document.querySelector(
+          `.book-conversation-step[data-step="${currentStep}"] form`
+        );
+
+        // --- Step-specific validation ---
+        if (currentStep === 2) {
+          const selectedGoals = currentForm.querySelectorAll(
+            'input[name="goals"]:checked'
+          );
+          if (selectedGoals.length === 0 || selectedGoals.length > 2) {
+            alert("Please select 1 or 2 top goals.");
+            return;
+          }
+        }
+        // --- End step-specific validation ---
+
+        // Generic validation for other steps
+        if (!currentForm.checkValidity()) {
+          currentForm.reportValidity();
+          return;
+        }
+
+        console.log(
+          `Step ${currentStep} data is valid. Moving to the next step...`
+        );
+
+        document
+          .querySelector(`.book-conversation-step[data-step="${currentStep}"]`)
+          .classList.remove("book-conversation-step--active");
+
+        currentStep++;
+
+        if (currentStep <= totalSteps) {
+          const nextStepElement = document.querySelector(
+            `.book-conversation-step[data-step="${currentStep}"]`
+          );
+          if (nextStepElement) {
+            nextStepElement.classList.add("book-conversation-step--active");
+            // Update progress bar and text for the newly active step
+            const progressIndicator = nextStepElement.querySelector(
+              ".book-conversation-step__progress-indicator"
+            );
+            const progressText = nextStepElement.querySelector(
+              ".book-conversation-step__progress-text"
+            );
+
+            const percent = ((currentStep - 1) / (totalSteps - 1)) * 100;
+
+            progressIndicator.style.width = `${percent}%`;
+            progressText.textContent = `${String(currentStep).padStart(
+              2,
+              "0"
+            )} of ${String(totalSteps).padStart(2, "0")}`;
+          } else {
+            console.warn(
+              `Step ${currentStep} element not found. Form finished or missing steps.`
+            );
+            alert("Form finished! (Step data would be submitted here)");
+          }
+        } else {
+          alert("Form finished! (Step data would be submitted here)");
+        }
+      }
+
+      // Event listener for goal selection to manage up to 2 selections
+      document.addEventListener("change", function (event) {
+        if (event.target.matches(".book-conversation-step__goal-checkbox")) {
+          const form = event.target.closest("form");
+          const checkboxes = form.querySelectorAll('input[name="goals"]');
+          const checkedCount = form.querySelectorAll(
+            'input[name="goals"]:checked'
+          ).length;
+
+          if (checkedCount > 2) {
+            event.target.checked = false;
+            alert("You can select a maximum of 2 goals.");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

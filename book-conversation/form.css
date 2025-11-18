@@ -1,0 +1,788 @@
+@font-face {
+  font-family: "GT Walsheim Trial Cn Lt";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Lt"),
+    url("./fonts/gt-trials/GT-Walsheim-Condensed-Light-Trial-BF651b7fc73810c.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Rg";
+  font-style: normal;
+  font-weight: normal;
+  src: local("./fonts/gt-trials/GT Walsheim Trial Cn Rg"),
+    url("GT-Walsheim-Condensed-Regular-Trial-BF651b7fc730eb2.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim ProCB"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBlack.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBlack.woff")
+      format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff2")
+      format("woff2"),
+    url("./fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff") format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Con"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-CondensedRegular.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff") format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Md";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Md"),
+    url("./fonts/gt-trials/GT-Walsheim-Condensed-Medium-Trial-BF651b7fc70de01.woff")
+      format("woff");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-image: url(../img/bg-effect.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  background-color: #ffffffe4;
+  background-blend-mode: soft-light;
+}
+
+.multi-step-wrapper {
+  /* width: 90%; */
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px 25px 37px 25px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.4),
+    0px -14px 15px -3px rgba(0, 0, 0, 0.1);
+
+  padding-top: 70px;
+  background-image: url(../img/form-bg1.jpg);
+  background-color: #ffffffa9;
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ------------------ HEADER ------------------ */
+
+.step-header {
+  background: #0a3d43;
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 35px;
+  position: relative;
+}
+
+.step-counter-container {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: 7px solid #1e927b;
+  width: 110px;
+  height: 110px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step-counter {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.counter-circle {
+  width: 100px;
+  height: 100px;
+  left: 5px;
+  top: 5px;
+  border-radius: 50%;
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.counter-circle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* top: -4px; */
+  border-radius: 50%;
+
+  padding: 7px;
+
+  background: linear-gradient(
+    84.75deg,
+    #e1e6e5 -0.34%,
+    #e7e4b4 51.09%,
+    #fcdd0a 102.52%
+  );
+
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(100% - 7px),
+    #000 calc(100% - 7px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(100% - 7px),
+    #000 calc(100% - 7px)
+  );
+}
+
+.counter-circle span {
+  font-size: 50px;
+  font-weight: 700;
+  color: #000000;
+  font-family: "GT Walsheim ProCB";
+  line-height: 1.2;
+}
+
+.step-progress-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.step-titles .step-title {
+  max-width: 340px;
+  margin: 0 auto;
+}
+.step-title h2 {
+  color: #ffffff;
+  font-size: 22px;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  padding: 0px 50px;
+  padding-top: 24px;
+  max-width: 220px;
+  margin: 0 auto;
+
+  /* max-width: 260px; */
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.step-title p.desktop-p {
+  display: none;
+}
+
+.step-title p {
+  margin-top: 6px;
+  color: #fff;
+  letter-spacing: 0.8px;
+  font-size: 14px;
+  font-family: "GT Walsheim Con";
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  letter-spacing: 0.9px;
+}
+
+/* Progress Bar */
+
+.progress-area {
+  padding-bottom: 25px;
+  padding-top: 28px;
+}
+
+.progress-area .box-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-divider {
+  background-color: #196770;
+  height: 1.1px;
+  width: 72%;
+}
+
+.progress-text {
+  color: #ffffff;
+  font-size: 13px;
+  font-family: "GT Walsheim Con";
+  letter-spacing: 0.7px;
+  text-align: center;
+}
+
+.progress-bar {
+  margin-top: 6px;
+  width: 160px;
+  height: 10px;
+  background: #fff;
+  opacity: 0.8;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 25%;
+  background: #fcdd0a;
+  border-radius: inherit;
+}
+
+/* ------------------ FORM BODY ------------------ */
+
+.form-step,
+.step-title {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: none;
+}
+
+.form-step.active,
+.step-title.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  animation: fadeInStep 0.4s ease forwards;
+}
+
+@keyframes fadeInStep {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Grid layout (Desktop) */
+
+.form-grid,
+.goals-grid {
+  padding-top: 33px;
+}
+.form-step {
+  padding-bottom: 30px;
+}
+.form-grid,
+.form-grid .grid-input {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 14px;
+}
+
+.form-grid input,
+.form-grid textarea {
+  padding: 18px 40px;
+  font-size: 14px;
+  border-radius: 40px;
+  border: 1px solid #ddd;
+  outline: none;
+  background: #fff;
+  font-weight: bold;
+
+  color: #0d4036;
+  box-shadow: 0px 14px 13px -3px rgba(0, 0, 0, 0.3);
+  font-family: "GT Walsheim Con";
+  letter-spacing: 0.8px;
+}
+.form-grid input::placeholder,
+.form-grid textarea::placeholder {
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  font-weight: 300;
+}
+.form-grid textarea::placeholder {
+  padding-right: 60px;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+  border-radius: 25px !important;
+}
+
+/* .form-grid textarea {
+   padding-right: 100px;
+} */
+
+/* ============================ STEP 4 */
+.outcome-grid {
+  display: grid;
+  gap: 22px;
+}
+.outcome-grid label {
+  font-family: "GT Walsheim Trial Cn Md";
+
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #0d4036;
+  font-size: 14px;
+  margin-left: 35px;
+}
+
+.outcome-grid .outcome-input textarea{
+  height: 100px;
+}
+
+/* ===================== CUSTOM INDUSTRY */
+
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select {
+  /* width: 80%; */
+  padding: 18px 20px;
+  background: #fff;
+  border-radius: 40px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  padding-left: 40px;
+  color: gray;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 14px 13px -3px rgba(0, 0, 0, 0.3);
+}
+.custom-select img {
+  width: auto;
+  height: 10px;
+}
+.custom-select .selected-option {
+  font-family: "GT Walsheim Con";
+}
+
+.custom-select .dropdown-arrow {
+  width: 18px;
+  pointer-events: none;
+  transition: transform 0.25s;
+}
+
+.custom-select.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Options Box */
+
+.custom-options {
+  position: absolute;
+  top: 58px;
+  width: 95%;
+  left: 10px;
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 99;
+  font-family: "GT Walsheim Con";
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.custom-options::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-options.show {
+  display: block;
+}
+
+.custom-options li {
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: "GT Walsheim Con";
+}
+
+.custom-options li:hover {
+  background: rgba(30, 146, 123, 0.1);
+}
+
+/* ============================STAGE 2========================  */
+
+/* === GOALS GRID === */
+.goals-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 0 auto;
+  /* align-items: start; */
+}
+
+/* === GOAL CARD === */
+.goal-card {
+  position: relative;
+  background: #fff;
+  color: #0d4036;
+  height: 60px;
+  text-align: left;
+
+
+  border-radius: 14px;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0px 10px 13px -3px rgba(0, 0, 0, 0.3);
+  /* 
+    padding: 15px 14px;
+  width: 30vw; */
+  padding: 15px 0px;
+  width: 37vw;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 0.6rem;
+}
+
+.goal-card input {
+  display: none;
+}
+
+.goal-text {
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1.1;
+  pointer-events: none;
+  font-family: "GT Walsheim Con";
+  padding: 0px 10px;
+  letter-spacing: 0.7px;
+  max-width: 115px;
+}
+
+/* === CHECKMARK CIRCLE === */
+.goal-checkmark {
+  position: absolute;
+  top: -15px;
+  right: -8px;
+  width: 28px;
+  height: 28px;
+  background-color: #1ed2aa;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.3s ease;
+}
+
+.goal-checkmark img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: brightness(0) invert(1);
+}
+
+/* === SELECTED STATE === */
+.goal-card.selected {
+  box-shadow: 0px 9px 13px -3px rgb(30, 210, 170, 0.3);
+
+  transform: scale(1.01);
+  color: #1ed2aa;
+}
+
+/* Show checkmark when selected */
+.goal-card.selected .goal-checkmark {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* === BLURRED CARDS === */
+.goal-card.blurred {
+  filter: blur(1px);
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* ============================STAGE 3========================  */
+
+/* Buttons */
+.step-buttons {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 13px 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step-buttons a{
+
+  text-decoration: none;
+}
+
+.back-btn {
+  background: transparent;
+  border: 2px solid #b0d3cc;
+  color: #0d4036;
+}
+
+.back-btn i {
+  color: #0d4036;
+}
+
+.back-btn:disabled {
+  opacity: 0.8;
+  cursor: default;
+}
+
+.next-btn {
+  background: #591044;
+  color: #fff;
+  box-shadow: 0px 4px 15px -3px rgba(0, 0, 0, 0.6);
+}
+.btn i {
+  font-size: 17px;
+}
+
+.submit-btn {
+  background: #591044;
+  color: #fff;
+}
+
+/* --------------- RESPONSIVE: MOBILE COLUMN --------------- */
+
+/* Medium screens (small laptops) and up */
+@media (min-width: 768px) {
+  /* .goals-grid {
+    gap: 20px;
+  } */
+
+  .goal-card {
+    width: 40vw;
+
+    padding: 22px 12px;
+  }
+
+  .goal-text {
+    font-size: 1rem;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .multi-step-wrapper {
+    padding: 0px;
+    overflow: visible;
+    margin-top: 70px;
+  }
+
+  .step-header {
+    border-radius: 0px;
+  }
+
+  .step-counter-container {
+    position: absolute;
+    top: -60px;
+    left: 12%;
+    transform: translateX(-50%);
+  }
+
+  .step-divider {
+    display: none;
+  }
+
+  .step-progress-container {
+    max-width: initial;
+  }
+  .step-header {
+    text-align: center;
+    gap: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-bottom: 22px;
+  }
+
+  .step-titles .step-title {
+    max-width: initial;
+    margin: 0 auto;
+    height: 74px;
+  }
+
+  .step-title p.desktop-p {
+    display: block;
+  }
+  .step-title p.mobile-p {
+    display: none;
+  }
+  .step-title.title3 p {
+    white-space: nowrap;
+  }
+
+  /* .step-title.title2,
+  .step-title.title3 {
+    padding-bottom: 16px;
+  }
+  .step-title.title4 {
+    padding-bottom: 40px;
+  } */
+
+  .step-title h2 {
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    max-width: initial;
+  }
+  .step-title p {
+    font-size: 14px;
+    max-width: 340px;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+  .progress-area {
+    position: absolute;
+    top: 10px;
+    right: 10%;
+    transform: translateX(20%);
+    border-bottom: 0px;
+  }
+  .progress-text {
+    text-align: right;
+  }
+
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  textarea {
+    height: 120px;
+    margin-top: -2rem;
+  }
+
+  /* STEP 4 */
+  .outcome-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .outcome-grid textarea {
+    height: 80px;
+    margin-top: 0rem;
+  }
+
+  .goals-grid {
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  .goal-card {
+    width: 170px;
+
+    padding: 22px 12px;
+  }
+
+  .goal-text {
+    font-size: 0.9rem;
+    max-width: 150px;
+    margin: 0 auto;
+    padding: 0px 15px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .multistep-form-container {
+    margin-top: 100px;
+  }
+  .step-counter-container {
+    width: 86px;
+    height: 86px;
+  }
+  .counter-circle {
+    width: 80px;
+    height: 80px;
+    left: 3px;
+    top: 3px;
+  }
+  .counter-circle span {
+    font-size: 32px;
+  }
+  .step4 .step-buttons {
+    margin-top: 20px;
+  }
+
+  .form-grid,
+  .goals-grid {
+    padding-top: 60px;
+  }
+  .goal-card {
+    max-width: 480px;
+    height: 43px;
+
+    padding: 18px 15px;
+    gap: 17px;
+  }
+  .goal-text {
+
+    max-width: 125px;
+  }
+  .goals-grid {
+    max-width: 950px;
+    /* border: 1px solid red; */
+
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>schedule Conversatiohhn</title>
+
+    <!-- <script
+      src="https://kit.fontawesome.com/3df60fe6e2.js"
+      crossorigin="anonymous"
+    ></script> -->
+  </head>
+  <link rel="stylesheet" href="./schedule.css" />
+  <body>
+    <section class="schedule-conversation-section">
+      <div class="box-container">
+        <div class="intro-container">
+          <div class="left-content">
+            <h3>Schedule Your Consultation</h3>
+
+            <div class="info">
+              <img
+                src="../img/left-conv-pattern.png"
+                class="content-pattern"
+                alt=""
+              />
+              <img
+                src="../img/schedule-pattern.png"
+                class="schedule-pattern"
+                alt=""
+              />
+              <div class="info-content">
+                <!-- SUBMIT BUTTON -->
+
+                <div class="btn">
+                  <button id="submitSchedule">
+                    Submit
+                    <div><img src="../img/right.png" alt="" /></div>
+                  </button>
+                </div>
+
+                <div class="para">
+                  <p>
+                    Pick a convenient date and time for your session. You’ll
+                    receive a confirmation email once it’s booked.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CALENDAR AREA -->
+          <!-- <div class="right-content"> -->
+          <div id="calendar-wrapper">
+            <div class="calendar-header">
+              <h3>Select Day</h3>
+              <div class="nav-row">
+                <div class="prev-wrapper">
+                  <button id="prevMonth">
+                    <img src="../img/left.png" alt="" />
+                  </button>
+                  <div class="prev-tooltip">
+                    You cannot go before the current month
+                  </div>
+                </div>
+
+                <input
+                  type="text"
+                  id="monthInput"
+                  placeholder="November 2025"
+                />
+
+                <button id="nextMonth">
+                  <img src="../img/right-arrow.png" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div id="calendar-grid">
+              <div class="weekdays">
+                <div class="weekday">Mon</div>
+                <div class="weekday">Tue</div>
+                <div class="weekday">Wed</div>
+                <div class="weekday">Thu</div>
+                <div class="weekday">Fri</div>
+                <div class="weekday">Sat</div>
+                <div class="weekday">Sun</div>
+              </div>
+
+              <div id="dates"></div>
+            </div>
+
+            <div class="output-box mobile">
+              <p><strong>Selected Date:</strong></p>
+              <p id="selectedDate">—</p>
+            </div>
+
+            <!-- TIME AREA -->
+            <!-- <div class="time-box">
+              <div class="timezone-row">
+                <label>Set time</label>
+                <select id="timezone">
+                  <option value="GMT">GMT</option>
+                  <option value="UTC">UTC</option>
+                  <option value="WAT">WAT</option>
+                </select>
+              </div>
+
+              <div class="time-select-row">
+                <select id="hourSelect"></select>
+                <span>:</span>
+                <select id="minuteSelect"></select>
+                <span>:</span>
+                <select id="secondSelect"></select>
+                <select id="ampmSelect">
+                  <option>AM</option>
+                  <option>PM</option>
+                </select>
+              </div>
+            </div> -->
+
+            <!-- TIME AREA (custom floating dropdowns - style A) -->
+            <div class="time-box">
+              <div class="timezone-row">
+                <label>Set time</label>
+
+                <div
+                  class="custom-dropdown timeZone"
+                  id="dropdown-timezone"
+                  tabindex="0"
+                  role="listbox"
+                  aria-label="Timezone"
+                >
+                  <button
+                    class="cd-toggle"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                  >
+                    <span class="cd-selected">GMT</span>
+                    <span class="cd-caret">▾</span>
+                  </button>
+                  <ul class="cd-list" role="listbox" aria-hidden="true">
+                    <li role="option" data-value="GMT" class="cd-option">
+                      GMT
+                    </li>
+                    <li role="option" data-value="UTC" class="cd-option">
+                      UTC
+                    </li>
+                    <li role="option" data-value="WAT" class="cd-option">
+                      WAT
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="time-select-row">
+                <div
+                  class="custom-dropdown"
+                  id="dropdown-hour"
+                  tabindex="0"
+                  role="listbox"
+                  aria-label="Hour"
+                >
+                  <button
+                    class="cd-toggle"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                  >
+                    <span class="cd-selected">01</span>
+                    <span class="cd-caret">▾</span>
+                  </button>
+                  <ul class="cd-list" role="listbox" aria-hidden="true"></ul>
+                </div>
+
+                <span class="time-sep">:</span>
+
+                <div
+                  class="custom-dropdown"
+                  id="dropdown-minute"
+                  tabindex="0"
+                  role="listbox"
+                  aria-label="Minute"
+                >
+                  <button
+                    class="cd-toggle"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                  >
+                    <span class="cd-selected">00</span>
+                    <span class="cd-caret">▾</span>
+                  </button>
+                  <ul class="cd-list" role="listbox" aria-hidden="true"></ul>
+                </div>
+
+                <span class="time-sep">:</span>
+
+                <div
+                  class="custom-dropdown"
+                  id="dropdown-second"
+                  tabindex="0"
+                  role="listbox"
+                  aria-label="Second"
+                >
+                  <button
+                    class="cd-toggle"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                  >
+                    <span class="cd-selected">00</span>
+                    <span class="cd-caret">▾</span>
+                  </button>
+                  <ul class="cd-list" role="listbox" aria-hidden="true"></ul>
+                </div>
+
+                <div
+                  class="custom-dropdown"
+                  id="dropdown-ampm"
+                  tabindex="0"
+                  role="listbox"
+                  aria-label="AM or PM"
+                >
+                  <button
+                    class="cd-toggle"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                  >
+                    <span class="cd-selected">AM</span>
+                    <span class="cd-caret">▾</span>
+                  </button>
+                  <ul class="cd-list" role="listbox" aria-hidden="true">
+                    <li role="option" data-value="AM" class="cd-option">AM</li>
+                    <li role="option" data-value="PM" class="cd-option">PM</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="output-box mobile">
+              <p style="margin-top: 10px"><strong>Selected Time:</strong></p>
+              <p id="selectedTime">—</p>
+            </div>
+
+            <!-- SELECTED OUTPUT -->
+            <div class="output-box desktop">
+              <p><strong>Selected Date:</strong></p>
+              <p id="selectedDate">—</p>
+
+              <p style="margin-top: 10px"><strong>Selected Time:</strong></p>
+              <p id="selectedTime">—</p>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <!-- POPUP MODAL -->
+      <div id="scheduleModal" class="modal-overlay">
+        <div class="modal-box">
+          <h3>Schedule Confirmed 🎉</h3>
+          <p id="modalDateText"></p>
+          <p id="modalTimeText"></p>
+
+          <button id="closeModal" class="close-btn">Okay</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLASH MESSAGE CONTAINER -->
+    <div id="flashContainer"></div>
+
+    <script src="./schedule.js"></script>
+  </body>
+</html>

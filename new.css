@@ -1,0 +1,760 @@
+@font-face {
+  font-family: "GT Walsheim Trial Md";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Md"),
+    url("./fonts/gt-trials/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.woff")
+      format("woff");
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+body .hidden {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body .hidden {
+  display: none;
+}
+/* .interest-form-layout-container */
+.interest-form-layout-container {
+  max-width: 1264px;
+  margin: 0 auto;
+}
+
+.form-layout-container {
+  padding: 20px 12px 20px 23px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+/*====================================================================
+ ========================== Interest Heading Heading Container ========================= */
+.interest-form-heading {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.interest-form-heading .header h1 {
+  font-size: 33px;
+  font-weight: 400;
+  color: #0d4036;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+.interest-form-layout-container
+  .interest-form-heading
+  > div:not(.first-form-heading)
+  p {
+  font-size: 15px;
+}
+
+.interest-form-heading .subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.interest-form-heading .subtitle .line {
+  width: 23vw;
+  max-width: 120px;
+  height: 3px;
+  background-color: #137077;
+  border-radius: 2px;
+  margin-right: 6px;
+}
+
+.interest-form-heading .subtitle p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #137077;
+}
+
+/* 2. Description Section */
+.interest-form-heading .description {
+  margin: 30px 0;
+}
+
+.interest-form-heading .description p {
+  font-size: 13px;
+  color: #0d4036;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 3. Progress Stepper */
+.progress-step-container {
+  width: 100%;
+}
+.interest-form-heading .progress-stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 10px;
+}
+
+/* This ::before pseudo-element creates the gray line */
+.interest-form-heading .progress-stepper::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 12%;
+  right: 12%;
+  height: 4px;
+  background-color: #ebefee;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.interest-form-heading .progress-stepper::after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 12%;
+  right: 12%;
+  height: 4px;
+  background-color: #137077;
+  z-index: 1;
+  transform: translateY(-50%);
+  width: var(--progress-width, 0%);
+}
+
+.interest-form-heading .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.interest-form-heading .step .circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+
+  /* Inactive State Styles */
+  background-color: #ebefee;
+  border: 3px solid #cfd0d0;
+  color: #cfd0d0;
+}
+
+.interest-form-heading .step .label {
+  margin-top: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  transition: all 0.3s ease;
+
+  color: #cfd0d0;
+}
+
+/* Active State Styles */
+
+.interest-form-heading .step.active .circle {
+  background-color: #3daab2;
+  border-color: #137077;
+  color: #ffffff;
+}
+
+.interest-form-heading .step.active .label {
+  color: #137077;
+  font-weight: 700;
+}
+.step.completed .circle {
+  background-color: #137077;
+  border-color: #137077;
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* =========================================== Headings */
+/* .interest-form-heading > div {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+.interest-form-heading > div.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+/*====================================================================
+ ========================== Interest Form Container ========================= */
+.interest-form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interest-form-container .form-container {
+  background-color: #137077;
+  padding: 65px 30px;
+  border-radius: 35px;
+  width: 100%;
+  max-width: 650px;
+
+  margin-top: 40px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.interest-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Group (Label + Input/Select) */
+.interest-form-group {
+  margin-bottom: 25px;
+}
+
+.interest-form-group:last-of-type {
+  margin-bottom: 40px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: #f0f0f0;
+  margin-bottom: 8px;
+  margin-left: 40px;
+  font-family: "GT Walsheim Trial Md";
+}
+
+/* Input Field Styling */
+input {
+  width: 100%;
+  padding: 18px 20px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  font-family: "GT Walsheim Trial Md";
+}
+
+input::placeholder {
+  color: #ececec80;
+  font-size: 12px;
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Custom Select Styling */
+.interest-form-custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Select Input */
+/* Base wrapper */
+.custom-select {
+  position: relative;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+}
+
+/* Trigger (main visible input) */
+.custom-select-trigger {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #a8bdbf;
+  border-radius: 30px;
+  padding: 18px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.custom-select-trigger:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Text inside the trigger */
+.custom-select-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Arrow styling */
+.custom-select-arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Dropdown list */
+.custom-options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #137077;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* Option item */
+.custom-option {
+  display: block;
+  padding: 12px 18px;
+  font-size: 13px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.custom-option:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* When dropdown is active */
+.custom-select.open .custom-options {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.custom-select.open .custom-select-arrow {
+  transform: rotate(180deg);
+}
+
+/* Active option (highlighted) */
+.custom-option.active {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ===================================================== FOR FORM THREE  */
+/* Container for all tags */
+.interest-form-tags {
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Individual tag wrapper */
+.interest-form-tag {
+  background-color: #ffffff;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding: 8px 25px;
+  gap: 10px;
+  cursor: pointer;
+}
+.interest-form-tag span {
+  display: block;
+  font-size: 11px;
+}
+.interest-form-tag span:first-of-type {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 2px solid #0d4036;
+  font-family: "GT Walsheim Trial Md";
+  padding: 2px;
+}
+.interest-form-tag span svg {
+  color: #fff;
+
+  width: 20px;
+  height: 20px;
+  font-weight: 900;
+}
+.interest-form-tag span.active svg {
+  color: #0d4036;
+}
+
+/* Sublabel for revenue field */
+.interest-form-sublabel {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin-top: 3px;
+}
+
+/* Textarea Styling */
+textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px; /* Highly rounded corners for the single-line input/textarea */
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  resize: none; /* Prevent manual resizing */
+}
+
+/* Specific styling for the larger description textarea */
+#companyDescription {
+  border-radius: 20px; 
+  min-height: 120px;
+  padding-top: 20px;
+}
+
+textarea:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Question and List Styling */
+.interest-form-question {
+  font-size: 12px;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-left: 40px;
+  line-height: 1.5;
+}
+
+.interest-form-list {
+  color: #f0f0f0;
+  font-size: 12px;
+  font-weight: 500;
+  padding-left: 20px;
+  margin-left: 40px;
+  margin-top: 7px;
+}
+
+.interest-form-list li {
+  margin-bottom: 5px;
+}
+
+/* Custom Radio Button Group Styling (Three Buttons) */
+.interest-form-option-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  /* margin-bottom: 30px; */
+}
+
+.interest-form-option input[type="radio"] {
+  /* Hide the actual radio button */
+  display: none;
+}
+
+.interest-form-option label {
+  display: block;
+  padding: 12px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* Default (unchecked/inactive) state */
+  background-color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #0d4036;
+  margin: 0; /* Override default label margin */
+  white-space: nowrap;
+}
+
+/* Checked (Active) State for the Option Button */
+.interest-form-option input[type="radio"]:checked + label {
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #0d4036; /* Dark teal text when active */
+}
+
+.interest-form-option label:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Submit Button Override */
+.interest-form-submit-button {
+  padding: 13px 45px;
+  background-color: #e2f091;
+  color: #4a6a00;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.interest-form-submit-button:hover {
+  background-color: #d6e885;
+  transform: translateY(-2px);
+}
+
+.interest-form-submit-button:active {
+  background-color: #cedb7e;
+  transform: translateY(0);
+}
+
+/* Proceed Button Styling */
+.interest-form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.interest-form .first-stage-form-container .interest-form-actions {
+  justify-content: end;
+}
+
+/* Return Button Styling (New) */
+.interest-form-return-button {
+  padding: 13px 45px;
+  background-color: transparent;
+  color: #ffffff; /* White text */
+  border: 1px solid white;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.interest-form-return-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Adjust the proceed button alignment from the previous form to work with the button group */
+.interest-form-proceed-button {
+
+  padding: 13px 45px;
+
+  background-color: #cced60;
+  color: #0d4036;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  /* width: 50%; */
+}
+
+.interest-form-proceed-button:hover {
+  background-color: #d6e885;
+  transform: translateY(-2px);
+}
+
+.interest-form-proceed-button:active {
+  background-color: #cedb7e;
+  transform: translateY(0);
+}
+
+
+
+.interest-form-layout-container .desktop-heading {
+  display: none;
+}
+.interest-form-layout-container .mobile-heading {
+  display: block;
+}
+
+/*====================================================================
+ ========================== Interest Footer Container ========================= */
+.interest-form-footer {
+  width: 100%;
+  margin: 60px auto;
+  padding-left: 5px;
+  max-width: 650px;
+}
+
+.interest-form-footer h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 15px 0;
+}
+
+.interest-form-footer-contact-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+.interest-form-footer-contact-row > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.interest-form-footer-contact-row > div:last-of-type {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+.interest-form-footer-contact-row > div:last-of-type span:last-of-type {
+  margin-bottom: 9px;
+}
+
+.interest-form-footer-contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.interest-form-footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #0d4036;
+  color: #ffffff;
+  font-size: 20px;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.interest-form-footer-contact-item a,
+.interest-form-footer-contact-item span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555555;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.interest-form-footer-contact-item a:hover {
+  color: #0d4036;
+}
+.interest-form-footer-contact-item .phone {
+  text-decoration: underline;
+}
+/* Specific styling for the location text which is not a link */
+.interest-form-footer-contact-item span:not(.interest-form-footer-icon) {
+  color: #555555;
+}
+
+/* Desktop specific styles */
+@media (min-width: 992px) {
+  .form-layout-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding-right: 20px;
+  }
+
+  .row-two-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .row-two-container .interest-form-heading.desktop-heading {
+    width: 100%;
+    margin: 0;
+  }
+  .form-heading-card {
+    max-width: 500px;
+  }
+  .interest-form-heading .header h1 {
+    font-size: 39px;
+  }
+
+  .interest-form-heading.desktop-heading .description p {
+    font-size: 15px;
+  }
+
+  .interest-form-footer {
+    margin: 0px;
+    padding-left: 0px;
+    max-width: auto;
+  }
+  .interest-form-container .form-container {
+    margin-top: 0px;
+    max-width: 500px;
+    padding: 65px 40px;
+  }
+
+  .interest-form-return-button,
+  .interest-form-proceed-button {
+    /* Uses the slightly transparent input background for its base color */
+    padding: 15px 60px;
+  }
+
+  .interest-form-layout-container .desktop-heading {
+    display: block;
+  }
+  .interest-form-layout-container .mobile-heading {
+    display: none;
+  }
+
+  .interest-form-footer-contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 20px;
+  }
+
+  .interest-form-footer-contact-row > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .interest-form-footer-contact-row > div:last-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .interest-form-footer-contact-row > div span {
+    white-space: nowrap;
+  }
+  .interest-form-footer-contact-row > div:last-of-type span:last-of-type {
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .form-layout-container {
+    padding: 0px;
+  }
+}

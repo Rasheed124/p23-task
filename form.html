@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Information</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="new.css" />
+  </head>
+  <body>
+    <div class="form-group2_field">
+      <div class="contact-info-form__group name-field">
+        <label class="floating-label">Phone Number</label>
+        <input
+          type="tel"
+          name="phone"
+          class="floating-input @error('phone') error @enderror"
+          placeholder="+1234567890"
+          value="{{ old('phone') }}"
+        />
+        @error('phone')
+        <div
+          class="error-message"
+          style="color: #e74c3c; font-size: 12px; margin-top: 5px"
+        >
+          {{ $message }}
+        </div>
+        @enderror
+      </div>
+      <div class="contact-info-form__group name-field">
+        <label class="floating-label">Country</label>
+        <div class="country-select" id="countrySelect">
+          <div class="selected-country">
+            <img
+              src="https://flagcdn.com/w40/za.png"
+              alt="flag"
+              class="flag-icon"
+            />
+            <span class="arrow">▼</span>
+          </div>
+          <ul class="country-list">
+            <li data-code="+1" data-flag="us">
+              <img src="https://flagcdn.com/w40/us.png" alt="" /> United States
+              (+1)
+            </li>
+            <li data-code="+44" data-flag="gb">
+              <img src="https://flagcdn.com/w40/gb.png" alt="" /> United Kingdom
+              (+44)
+            </li>
+            <li data-code="+27" data-flag="za">
+              <img src="https://flagcdn.com/w40/za.png" alt="" /> South Africa
+              (+27)
+            </li>
+            <li data-code="+234" data-flag="ng">
+              <img src="https://flagcdn.com/w40/ng.png" alt="" /> Nigeria (+234)
+            </li>
+            <li data-code="+91" data-flag="in">
+              <img src="https://flagcdn.com/w40/in.png" alt="" /> India (+91)
+            </li>
+            <li data-code="+61" data-flag="au">
+              <img src="https://flagcdn.com/w40/au.png" alt="" /> Australia
+              (+61)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="interest-form-layout-container">
+      <div class="form-layout-container">
+        <div class="row-one-container">
+          <!-- Mobile Heading -->
+          <section class="interest-form-heading mobile-heading">
+            <!-- First Form Heading -->
+            <div class="first-form-heading hidden">
+              <div class="form-heading-card">
+                <div class="header">
+                  <h1>Basic Information</h1>
+                  <div class="subtitle">
+                    <span class="line"></span>
+                    <p>Let's start with your basic details</p>
+                  </div>
+                </div>
+
+                <div class="description">
+                  <p>
+                    NOEL transforms executive networking from casual connections
+                    to strategic growth. Our platform facilitates verified,
+                    high-value introductions between senior leaders and
+                    investors. Focus on building relationships that drive real
+                    business outcomes.
+                  </p>
+                </div>
+                <div class="progress-step-container">
+                  <div class="progress-stepper">
+                    <div class="step active">
+                      <div class="circle">1</div>
+                      <div class="label">Basic Information</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">2</div>
+                      <div class="label">Credibility Check</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">3</div>
+                      <div class="label">Industry Preference</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">4</div>
+                      <div class="label">Industry Insight</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Form Heading -->
+            <div class="second-form-heading hidden">
+              <div class="form-heading-card">
+                <div class="header">
+                  <h1>Credibility Check</h1>
+                  <div class="subtitle">
+                    <span class="line"></span>
+                    <p>Stand out among other businesses</p>
+                  </div>
+                </div>
+
+                <div class="description">
+                  <p>
+                    NOEL transforms executive networking from casual connections
+                    to strategic growth. Our platform facilitates verified,
+                    high-value introductions between senior leaders and
+                    investors. Focus on building relationships that drive real
+                    business outcomes.
+                  </p>
+                </div>
+                <div class="progress-step-container">
+                  <div class="progress-stepper">
+                    <div class="step active">
+                      <div class="circle">1</div>
+                      <div class="label">Basic Information</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">2</div>
+                      <div class="label">Credibility Check</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">3</div>
+                      <div class="label">Industry Preference</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">4</div>
+                      <div class="label">Industry Insight</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Third Form Heading -->
+            <div class="third-form-heading hidden">
+              <div class="form-heading-card">
+                <div class="header">
+                  <h1>Industry Preference</h1>
+                  <div class="subtitle">
+                    <span class="line"></span>
+                    <p>Boost visibility for your matches</p>
+                  </div>
+                </div>
+
+                <div class="description">
+                  <p>
+                    NOEL transforms executive networking from casual connections
+                    to strategic growth. Our platform facilitates verified,
+                    high-value introductions between senior leaders and
+                    investors. Focus on building relationships that drive real
+                    business outcomes.
+                  </p>
+                </div>
+                <div class="progress-step-container">
+                  <div class="progress-stepper">
+                    <div class="step active">
+                      <div class="circle">1</div>
+                      <div class="label">Basic Information</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">2</div>
+                      <div class="label">Credibility Check</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">3</div>
+                      <div class="label">Industry Preference</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">4</div>
+                      <div class="label">Industry Insight</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fourth Form Heading -->
+            <div class="fourth-form-heading">
+              <div class="form-heading-card">
+                <div class="header">
+                  <h1>Industry Insight</h1>
+                  <div class="subtitle">
+                    <span class="line"></span>
+                    <p>Stand out among other businesses</p>
+                  </div>
+                </div>
+
+                <div class="description">
+                  <p>
+                    NOEL transforms executive networking from casual connections
+                    to strategic growth. Our platform facilitates verified,
+                    high-value introductions between senior leaders and
+                    investors. Focus on building relationships that drive real
+                    business outcomes.
+                  </p>
+                </div>
+                <div class="progress-step-container">
+                  <div class="progress-stepper">
+                    <div class="step active">
+                      <div class="circle">1</div>
+                      <div class="label">Basic Information</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">2</div>
+                      <div class="label">Credibility Check</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">3</div>
+                      <div class="label">Industry Preference</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">4</div>
+                      <div class="label">Industry Insight</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Form Section -->
+          <section class="interest-form-container">
+            <div class="form-container">
+              <form class="interest-form">
+                <!-- First Stage Form -->
+                <div class="first-stage-form-container hidden">
+                  <div class="interest-form-group">
+                    <label for="fullName">Full Name</label>
+                    <input
+                      type="text"
+                      id="fullName"
+                      placeholder="Input Full name"
+                    />
+                  </div>
+
+                  <div class="interest-form-group">
+                    <label for="title">Title</label>
+                    <div class="custom-select" id="customSelect">
+                      <div class="custom-select-trigger">
+                        <span class="custom-select-text"
+                          >Input your title, e.g CEO</span
+                        >
+                        <svg
+                          class="custom-select-arrow"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </div>
+                      <div class="custom-options">
+                        <span class="custom-option" data-value="CEO">CEO</span>
+                        <span class="custom-option" data-value="CTO">CTO</span>
+                        <span class="custom-option" data-value="CFO">CFO</span>
+                        <span class="custom-option" data-value="Manager"
+                          >Manager</span
+                        >
+                        <span class="custom-option" data-value="Director"
+                          >Director</span
+                        >
+                        <span class="custom-option" data-value="Other"
+                          >Other</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Hidden native select for form submission -->
+                    <select id="title" name="title" style="display: none">
+                      <option value="">Input your title, e.g CEO</option>
+                      <option value="CEO">CEO</option>
+                      <option value="CTO">CTO</option>
+                      <option value="CFO">CFO</option>
+                      <option value="Manager">Manager</option>
+                      <option value="Director">Director</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="interest-form-group">
+                    <label for="businessName">Official Business Name</label>
+                    <input
+                      type="text"
+                      id="businessName"
+                      placeholder="Input your business Name"
+                    />
+                  </div>
+
+                  <div class="interest-form-group">
+                    <label for="emailAddress">Email Address</label>
+                    <input
+                      type="email"
+                      id="emailAddress"
+                      placeholder="Input Email Address"
+                    />
+                  </div>
+
+                  <div class="interest-form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phoneNumber"
+                      placeholder="Input phone number"
+                    />
+                  </div>
+
+                  <div class="interest-form-actions">
+                    <button type="submit" class="interest-form-proceed-button">
+                      Proceed
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Second Form -->
+                <div class="second-stage-form-container hidden">
+                  <div class="interest-form-group">
+                    <label for="regNumber">Company Registration Number</label>
+                    <input
+                      type="text"
+                      id="regNumber"
+                      placeholder="Input you company Reg. Number"
+                    />
+                  </div>
+
+                  <div class="interest-form-group">
+                    <label for="countryReg">Country Of Registration</label>
+                    <input
+                      type="text"
+                      id="countryReg"
+                      placeholder="Input your country of Reg."
+                    />
+                  </div>
+
+                  <div class="interest-form-group">
+                    <label for="website"
+                      >Company Website or Social Handle</label
+                    >
+                    <input
+                      type="text"
+                      id="website"
+                      placeholder="Input your company website/socials"
+                    />
+                  </div>
+
+                  <div class="interest-form-group">
+                    <label for="linkedin">LinkedIn Profile</label>
+                    <input
+                      type="url"
+                      id="linkedin"
+                      placeholder="Add your profile Url (Optional)"
+                    />
+                  </div>
+
+                  <div class="interest-form-group">
+                    <label for="yearEst">Year of Establishment</label>
+                    <input
+                      type="number"
+                      id="yearEst"
+                      placeholder="Input year of establishment"
+                      pattern="[0-9]{4}"
+                      min="1900"
+                      max="2100"
+                    />
+                  </div>
+
+                  <div class="interest-form-actions">
+                    <button type="button" class="interest-form-return-button">
+                      Return
+                    </button>
+                    <button type="submit" class="interest-form-proceed-button">
+                      Proceed
+                    </button>
+                  </div>
+                </div>
+
+                <!-- third Form -->
+                <div class="third-stage-form-container">
+                  <!-- Industries -->
+                  <div class="interest-form-group">
+                    <label for="industry"
+                      >What industry does your business operate in?</label
+                    >
+                    <div class="custom-select" data-select="industry">
+                      <div class="custom-select-trigger">
+                        <span class="custom-select-text"
+                          >Primary & Industrial sector</span
+                        >
+                        <svg
+                          class="custom-select-arrow"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </div>
+                      <div class="custom-options">
+                        <span class="custom-option" data-value="agriculture"
+                          >Agribusiness</span
+                        >
+                        <span class="custom-option" data-value="manufacturing"
+                          >Manufacturing</span
+                        >
+                        <span class="custom-option" data-value="mining"
+                          >Mining</span
+                        >
+                        <span class="custom-option" data-value="logistics"
+                          >Logistics</span
+                        >
+                      </div>
+                    </div>
+
+                    <select name="industry" id="industry" style="display: none">
+                      <option value="">Primary & Industrial sector</option>
+                      <option value="agriculture">Agribusiness</option>
+                      <option value="manufacturing">Manufacturing</option>
+                      <option value="mining">Mining</option>
+                      <option value="logistics">Logistics</option>
+                    </select>
+                  </div>
+
+                  <!-- Categories -->
+                  <div class="interest-form-group">
+                    <div
+                      class="interest-form-tags"
+                      id="categoryContainer"
+                    ></div>
+                  </div>
+
+                  <!-- Hidden field to store selected categories for form submission -->
+                  <input
+                    type="hidden"
+                    name="categories"
+                    id="selectedCategories"
+                  />
+
+                  <!-- Employees Custom Select -->
+                  <div class="interest-form-group">
+                    <label for="employees">Numbers of Employees</label>
+
+                    <div class="custom-select" data-select="employees">
+                      <div class="custom-select-trigger">
+                        <span class="custom-select-text"
+                          >Select Employees range</span
+                        >
+                        <svg
+                          class="custom-select-arrow"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </div>
+
+                      <div class="custom-options">
+                        <span class="custom-option" data-value="1-10"
+                          >1-10</span
+                        >
+                        <span class="custom-option" data-value="11-50"
+                          >11-50</span
+                        >
+                        <span class="custom-option" data-value="51-200"
+                          >51-200</span
+                        >
+                        <span class="custom-option" data-value="201-500"
+                          >201-500</span
+                        >
+                        <span class="custom-option" data-value="500+"
+                          >500+</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Hidden native select -->
+                    <select
+                      id="employees"
+                      name="employees"
+                      style="display: none"
+                    >
+                      <option value="">Select Employees range</option>
+                      <option value="1-10">1-10</option>
+                      <option value="11-50">11-50</option>
+                      <option value="51-200">51-200</option>
+                      <option value="201-500">201-500</option>
+                      <option value="500+">500+</option>
+                    </select>
+                  </div>
+
+                  <!-- Revenue Custom Select -->
+                  <div class="interest-form-group">
+                    <label for="revenue">
+                      <span> Approximate annual revenue </span>
+                      <div class="interest-form-sublabel">
+                        (confidential – for internal use only)
+                      </div>
+                    </label>
+
+                    <div class="custom-select" data-select="revenue">
+                      <div class="custom-select-trigger">
+                        <span class="custom-select-text"
+                          >Select revenue range</span
+                        >
+                        <svg
+                          class="custom-select-arrow"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </div>
+
+                      <div class="custom-options">
+                        <span class="custom-option" data-value="0-1M"
+                          >Below $1M</span
+                        >
+                        <span class="custom-option" data-value="1-5M"
+                          >$1M - $5M</span
+                        >
+                        <span class="custom-option" data-value="5-20M"
+                          >$5M - $20M</span
+                        >
+                        <span class="custom-option" data-value="20M+"
+                          >$20M+</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Hidden native select -->
+                    <select id="revenue" name="revenue" style="display: none">
+                      <option value="">Select revenue range</option>
+                      <option value="0-1M">Below $1M</option>
+                      <option value="1-5M">$1M - $5M</option>
+                      <option value="5-20M">$5M - $20M</option>
+                      <option value="20M+">$20M+</option>
+                    </select>
+                  </div>
+
+                  <div class="interest-form-actions">
+                    <button type="button" class="interest-form-return-button">
+                      Return
+                    </button>
+                    <button type="submit" class="interest-form-proceed-button">
+                      Proceed
+                    </button>
+                  </div>
+                </div>
+
+                <!-- fourth Form -->
+                <div class="fourth-stage-form-container hidden">
+                  <div class="interest-form-group">
+                    <label for="offerValue"
+                      >What value can your company offer to other CEOs in the
+                      network?</label
+                    >
+                    <textarea
+                      id="offerValue"
+                      rows="1"
+                      placeholder="Enter your value"
+                    ></textarea>
+                  </div>
+
+                  <div class="interest-form-group">
+                    <label for="companyDescription"
+                      >Briefly describe what your company does and who your
+                      clients/customers are (max 150 words)</label
+                    >
+                    <textarea
+                      id="companyDescription"
+                      rows="5"
+                      placeholder="Enter you Value"
+                    ></textarea>
+                  </div>
+
+                  <div class="interest-form-group">
+                    <label for="interest"
+                      >What are you most interested in from this network?</label
+                    >
+
+                    <div class="custom-select" data-select="interest">
+                      <div class="custom-select-trigger">
+                        <span class="custom-select-text">Select interest</span>
+                        <span class="custom-select-arrow">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#ffffff"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                          </svg>
+                        </span>
+                      </div>
+
+                      <div class="custom-options">
+                        <div class="custom-option" data-value="networking">
+                          Networking
+                        </div>
+                        <div class="custom-option" data-value="leads">
+                          Verified Business Leads
+                        </div>
+                        <div class="custom-option" data-value="tools">
+                          Automated Sales Tools
+                        </div>
+                        <div class="custom-option" data-value="consulting">
+                          Consulting Support
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- hidden select to sync value -->
+                    <select name="interest" hidden>
+                      <option value="networking">Networking</option>
+                      <option value="leads">Verified Business Leads</option>
+                      <option value="tools">Automated Sales Tools</option>
+                      <option value="consulting">Consulting Support</option>
+                    </select>
+                  </div>
+
+                  <div class="interest-form-group">
+                    <p class="interest-form-question">
+                      If your business isn’t eligible for the CEO Referral
+                      Network at this time, would you be interested in joining
+                      our B2B platform to access:
+                    </p>
+                    <ul class="interest-form-list">
+                      <li>Verified business leads</li>
+                      <li>Automated sales tools</li>
+                      <li>Growth audits and consulting support?</li>
+                    </ul>
+
+                    <div class="interest-form-option-buttons">
+                      <div class="interest-form-option">
+                        <input
+                          type="radio"
+                          id="opt-yes"
+                          name="b2b_interest"
+                          value="yes"
+                          checked
+                        />
+                        <label for="opt-yes">Yes, I'm interested</label>
+                      </div>
+                      <div class="interest-form-option">
+                        <input
+                          type="radio"
+                          id="opt-maybe"
+                          name="b2b_interest"
+                          value="maybe"
+                        />
+                        <label for="opt-maybe"
+                          >Maybe, send me more information</label
+                        >
+                      </div>
+                      <div class="interest-form-option">
+                        <input
+                          type="radio"
+                          id="opt-no"
+                          name="b2b_interest"
+                          value="no"
+                        />
+                        <label for="opt-no">No, not interested</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="interest-form-actions">
+                    <button type="button" class="interest-form-return-button">
+                      Return
+                    </button>
+                    <button type="submit" class="interest-form-submit-button">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+
+        <div class="row-two-container">
+          <!-- Desktop Heading -->
+          <section class="interest-form-heading desktop-heading">
+            <!-- First Form Heading -->
+            <div class="first-form-heading hidden">
+              <div class="form-heading-card">
+                <div class="header">
+                  <h1>Basic Information</h1>
+                  <div class="subtitle">
+                    <span class="line"></span>
+                    <p>Let's start with your basic details</p>
+                  </div>
+                </div>
+
+                <div class="description">
+                  <p>
+                    NOEL transforms executive networking from casual connections
+                    to strategic growth. Our platform facilitates verified,
+                    high-value introductions between senior leaders and
+                    investors. Focus on building relationships that drive real
+                    business outcomes.
+                  </p>
+                </div>
+                <div class="progress-step-container">
+                  <div class="progress-stepper">
+                    <div class="step">
+                      <div class="circle">1</div>
+                      <div class="label">Basic Information</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">2</div>
+                      <div class="label">Credibility Check</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">3</div>
+                      <div class="label">Industry Preference</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">4</div>
+                      <div class="label">Industry Insight</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Form Heading -->
+            <div class="second-form-heading hidden">
+              <div class="form-heading-card">
+                <div class="header">
+                  <h1>Credibility Check</h1>
+                  <div class="subtitle">
+                    <span class="line"></span>
+                    <p>Stand out among other businesses</p>
+                  </div>
+                </div>
+
+                <div class="description">
+                  <p>
+                    NOEL transforms executive networking from casual connections
+                    to strategic growth. Our platform facilitates verified,
+                    high-value introductions between senior leaders and
+                    investors. Focus on building relationships that drive real
+                    business outcomes.
+                  </p>
+                </div>
+                <div class="progress-step-container">
+                  <div class="progress-stepper">
+                    <div class="step active">
+                      <div class="circle">1</div>
+                      <div class="label">Basic Information</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">2</div>
+                      <div class="label">Credibility Check</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">3</div>
+                      <div class="label">Industry Preference</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">4</div>
+                      <div class="label">Industry Insight</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Third Form Heading -->
+            <div class="third-form-heading hidden">
+              <div class="form-heading-card">
+                <div class="header">
+                  <h1>Industry Preference</h1>
+                  <div class="subtitle">
+                    <span class="line"></span>
+                    <p>Boost visibility for your matches</p>
+                  </div>
+                </div>
+
+                <div class="description">
+                  <p>
+                    NOEL transforms executive networking from casual connections
+                    to strategic growth. Our platform facilitates verified,
+                    high-value introductions between senior leaders and
+                    investors. Focus on building relationships that drive real
+                    business outcomes.
+                  </p>
+                </div>
+                <div class="progress-step-container">
+                  <div class="progress-stepper">
+                    <div class="step active">
+                      <div class="circle">1</div>
+                      <div class="label">Basic Information</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">2</div>
+                      <div class="label">Credibility Check</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">3</div>
+                      <div class="label">Industry Preference</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">4</div>
+                      <div class="label">Industry Insight</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fourth Form Heading -->
+            <div class="fourth-form-heading">
+              <div class="form-heading-card">
+                <div class="header">
+                  <h1>Industry Insight</h1>
+                  <div class="subtitle">
+                    <span class="line"></span>
+                    <p>Stand out among other businesses</p>
+                  </div>
+                </div>
+
+                <div class="description">
+                  <p>
+                    NOEL transforms executive networking from casual connections
+                    to strategic growth. Our platform facilitates verified,
+                    high-value introductions between senior leaders and
+                    investors. Focus on building relationships that drive real
+                    business outcomes.
+                  </p>
+                </div>
+                <div class="progress-step-container">
+                  <div class="progress-stepper">
+                    <div class="step active">
+                      <div class="circle">1</div>
+                      <div class="label">Basic Information</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">2</div>
+                      <div class="label">Credibility Check</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">3</div>
+                      <div class="label">Industry Preference</div>
+                    </div>
+
+                    <div class="step">
+                      <div class="circle">4</div>
+                      <div class="label">Industry Insight</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- footer -->
+          <section class="interest-form-footer">
+            <div class="form-footer">
+              <h2>Contact Information</h2>
+
+              <div class="interest-form-footer-contact-row">
+                <div>
+                  <div class="interest-form-footer-contact-item">
+                    <span class="interest-form-footer-icon"
+                      ><i class="fas fa-phone-alt"></i
+                    ></span>
+                    <a href="tel:+442080921281" class="phone"
+                      >+44 208 0921 281</a
+                    >
+                  </div>
+
+                  <div class="interest-form-footer-contact-item">
+                    <span class="interest-form-footer-icon"
+                      ><i class="fas fa-envelope"></i
+                    ></span>
+                    <a href="mailto:hello@p23africa.com">hello@p23africa.com</a>
+                  </div>
+                </div>
+
+                <div class="interest-form-footer-contact-item">
+                  <span class="interest-form-footer-icon"
+                    ><i class="fas fa-map-marker-alt"></i
+                  ></span>
+                  <span>London UK</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="./form-script.js"></script>
+  </body>
+</html>

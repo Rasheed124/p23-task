@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "GT Walsheim Trial Cn Lt";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Lt"),
+    url("./fonts/gt-trials/GT-Walsheim-Condensed-Light-Trial-BF651b7fc73810c.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Rg";
+  font-style: normal;
+  font-weight: normal;
+  src: local("./fonts/gt-trials/GT Walsheim Trial Cn Rg"),
+    url("GT-Walsheim-Condensed-Regular-Trial-BF651b7fc730eb2.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim ProCB"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBlack.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBlack.woff")
+      format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff2")
+      format("woff2"),
+    url("./fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff") format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Con"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-CondensedRegular.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff") format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Md";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Md"),
+    url("./fonts/gt-trials/GT-Walsheim-Condensed-Medium-Trial-BF651b7fc70de01.woff")
+      format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.blog-page-headings {
+  padding: 2rem 1.3rem;
+  background-image: url(../img/first-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: white;
+  background-blend-mode: overlay;
+}
+
+.blog-page-container .top-content {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  border-bottom: 2px dashed #0d4036;
+  color: #0d4036;
+}
+
+.blog-page-container .top-content h3 {
+  font-size: 1.2rem;
+  font-family: "GT Walsheim Con";
+}
+
+.blog-page-container .top-content h4 {
+  font-size: 2.5rem;
+  font-family: "GT Walsheim Con";
+}
+.blog-page-container .top-content p {
+  font-size: 1rem;
+  font-family: "GT Walsheim Con";
+}
+.blog-page-container .top-content p span {
+  text-decoration: underline;
+
+  color: rgba(227, 22, 22, 0.713);
+}

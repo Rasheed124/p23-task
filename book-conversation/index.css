@@ -1,0 +1,231 @@
+:root {
+    --color-dark-teal: #0D4036;
+    --color-light-lime: #A9CC3F;
+    --color-purple: #6B255D;
+    --color-background-light: #f7f7f7;
+    --color-text-dark: #333;
+}
+
+/* 1. Container and Main Structure */
+body {
+    background-color: var(--color-background-light);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.book-conversation-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 900px;
+    padding: 0;
+}
+
+.book-conversation-step {
+    padding: 0;
+    /* Styles for multi-step functionality - hide by default */
+    display: none;
+}
+
+.book-conversation-step--active {
+    display: block;
+}
+
+/* 2. Header and Progress */
+.book-conversation-step__header {
+    background-color: var(--color-dark-teal);
+    padding: 25px 40px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-conversation-step__number-container {
+    background-color: white;
+    border: 3px solid var(--color-light-lime);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-conversation-step__number {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color-dark-teal);
+}
+
+.book-conversation-step__header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.book-conversation-step__progress-text {
+    color: white;
+    font-size: 0.9em;
+    margin: 0 0 5px 0;
+}
+
+.book-conversation-step__progress-bar {
+    width: 150px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.book-conversation-step__progress-indicator {
+    height: 100%;
+    width: 25%; /* 1 out of 4 steps */
+    background-color: var(--color-light-lime);
+    border-radius: 3px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* 3. Content and Form Layout */
+.book-conversation-step__content {
+    padding: 40px;
+}
+
+.book-conversation-step__title {
+    font-size: 1.8em;
+    color: var(--color-text-dark);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.book-conversation-step__subtitle {
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 4. Input Fields and Columns */
+
+/* Default Stacked Layout (for smaller screens) */
+.book-conversation-step__fields-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book-conversation-step__column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book-conversation-step__input,
+.book-conversation-step__select,
+.book-conversation-step__textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+    outline: none;
+    background-color: #fff;
+    resize: none; /* Disable manual resize on textarea */
+}
+
+.book-conversation-step__input:focus,
+.book-conversation-step__select:focus,
+.book-conversation-step__textarea:focus {
+    box-shadow: 0 0 0 2px var(--color-light-lime);
+}
+
+.book-conversation-step__select-wrapper {
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.book-conversation-step__select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding-right: 40px; /* Space for custom arrow */
+}
+
+.book-conversation-step__select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--color-text-dark);
+    font-size: 0.8em;
+}
+
+.book-conversation-step__textarea {
+    height: 100%;
+    min-height: 180px; /* Ensure textarea is roughly the height of 4 inputs */
+}
+
+
+/* 5. Navigation Button */
+.book-conversation-step__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.book-conversation-step__button {
+    background-color: var(--color-purple);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 15px rgba(107, 37, 93, 0.4);
+}
+
+.book-conversation-step__button:hover {
+    background-color: #8a347b;
+}
+
+.book-conversation-step__button-icon {
+    font-size: 1.5em;
+}
+
+
+/* 6. Media Query for Two-Column Layout (Desktop/Tablet) */
+@media (min-width: 650px) {
+    .book-conversation-step__fields-group {
+        flex-direction: row; /* Enable columns */
+    }
+
+    .book-conversation-step__column {
+        flex: 1; /* Make columns take equal space */
+    }
+
+    .book-conversation-step__column--left {
+        margin-right: 20px;
+    }
+
+    .book-conversation-step__textarea {
+        min-height: calc(4 * 50px + 3 * 20px - 10px); /* Tweak for better visual alignment */
+        /* 4 inputs height + 3 gaps - small adjustment */
+    }
+}

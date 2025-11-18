@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+
+    <script
+      src="https://kit.fontawesome.com/3df60fe6e2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./contact.css" />
+  </head>
+  <body>
+    <section class="contact-section">
+      <div class="contact-container">
+        <!-- Intro Container -->
+        <div class="intro-contact-container">
+          <div class="box-container">
+            <div class="intro-container">
+              <!--COntent -->
+              <div class="intro-content">
+                <h2>Contact Us</h2>
+                <h4>Ready to expand your business?</h4>
+                <p>Contact P23 Africa and let’s make growth happen.</p>
+              </div>
+              <!-- Vertical desktop image -->
+              <div class="intro-vrt-image">
+                <img src="./img/contact-img.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-container">
+        <div class="contact-row">
+          <div class="left-row">
+            <!--  -->
+            <div class="contact-info">
+              <h2 class="heading">Contact Information</h2>
+              <div class="contact-info-icons">
+                <div class="icon phone">
+                  <img src="./img/phone.png" alt="" />
+                  <p><a href=""> +44 208 0921 281</a></p>
+                </div>
+                <div class="icon email">
+                  <img src="./img/email.png" alt="" />
+                  <p>hello@p23africa.com</p>
+                </div>
+                <div class="icon location">
+                  <img src="./img/address.png" alt="" />
+                  <p>London UK</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-info-form">
+              <form class="contact-info-form__container">
+                <h2 class="contact-info-form__title">Leave us a message</h2>
+
+                <div class="contact-info-form__group name-field">
+                  <label class="floating-label">Name</label>
+                  <input
+                    type="text"
+                    class="floating-input"
+                    placeholder="First_Name Last_Name"
+                  />
+                </div>
+
+                <div class="form-field2 country_with_phone">
+                  <div class="contact-info-form__group full-width">
+                    <label class="floating-label">Phone Number</label>
+                    <div class="phone-row">
+                      <!-- Country Flag Dropdown -->
+                      <div class="country-select" id="countrySelect">
+                        <div class="selected-country">
+                          <img
+                            src="https://flagcdn.com/w40/ng.png"
+                            alt="flag"
+                            class="flag-icon"
+                          />
+                          <span class="arrow">▼</span>
+                        </div>
+
+                        <ul class="country-list">
+                          <li data-code="+1" data-flag="us">
+                            <img src="https://flagcdn.com/w40/us.png" alt="" />
+                            United States (+1)
+                          </li>
+                          <li data-code="+44" data-flag="gb">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="" />
+                            United Kingdom (+44)
+                          </li>
+                          <li data-code="+27" data-flag="za">
+                            <img src="https://flagcdn.com/w40/za.png" alt="" />
+                            South Africa (+27)
+                          </li>
+                          <li data-code="+234" data-flag="ng">
+                            <img src="https://flagcdn.com/w40/ng.png" alt="" />
+                            Nigeria (+234)
+                          </li>
+                          <li data-code="+91" data-flag="in">
+                            <img src="https://flagcdn.com/w40/in.png" alt="" />
+                            India (+91)
+                          </li>
+                          <li data-code="+61" data-flag="au">
+                            <img src="https://flagcdn.com/w40/au.png" alt="" />
+                            Australia (+61)
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- Phone Input -->
+                      <div class="phone-input-wrapper">
+                        <span class="prefix" id="phonePrefix">+234</span>
+                        <input
+                          type="tel"
+                          id="phone"
+                          class="floating-input phone"
+                          placeholder="Enter phone number"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <input
+                  type="email"
+                  class="contact-info-form__input email"
+                  placeholder="Email Address"
+                />
+
+                <div class="contact-info-form__section-title">
+                  What service do you require
+                </div>
+                <p class="contact-info-form__subtitle">
+                  Select from the options
+                </p>
+
+                <div class="contact-info-form__tags">
+                  <div class="tag" data-value="Advise">
+                    <img class="tag-icon" src="./img/unselected.png" alt="" />
+                    Advise
+                  </div>
+
+                  <div class="tag" data-value="Marketing">
+                    <img class="tag-icon" src="./img/unselected.png" alt="" />
+                    Marketing
+                  </div>
+
+                  <div class="tag" data-value="Sales">
+                    <img class="tag-icon" src="./img/unselected.png" alt="" />
+                    Sales
+                  </div>
+
+                  <div class="tag" data-value="Launch">
+                    <img class="tag-icon" src="./img/unselected.png" alt="" />
+                    Launch
+                  </div>
+
+                  <div class="tag" data-value="Mentorship">
+                    <img class="tag-icon" src="./img/unselected.png" alt="" />
+                    Mentorship
+                  </div>
+
+                  <div class="tag" data-value="Operations">
+                    <img class="tag-icon" src="./img/unselected.png" alt="" />
+                    Operations
+                  </div>
+                </div>
+
+                <input type="hidden" name="services" id="selected-services" />
+
+                <textarea
+                  class="contact-info-form__textarea"
+                  placeholder="Add additional message here"
+                ></textarea>
+
+                <button type="submit" class="contact-info-form__btn">
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="right-row">
+            <!-- Location -->
+
+            <div class="contact-info-location">
+              <h3 class="heading">Location</h3>
+              <div class="location-content">
+                <p>185 Tower Bridge Rd</p>
+                <p>185 Tower Bridge Rd, London SE1 2UF, UK</p>
+              </div>
+
+              <div class="location-map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5780880978436!2d-0.08011252412324342!3d51.50260951105425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760345c64c3edb%3A0x617596184d03a84c!2s185%20Tower%20Bridge%20Rd%2C%20London%20SE1%202UF%2C%20UK!5e0!3m2!1sen!2sng!4v1746443001887!5m2!1sen!2sng"
+                  width="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="contact-info-socials">
+              <h3>Social Media</h3>
+
+              <div class="socials">
+                <a
+                  href="https://linkedin.com/company/p23-africa/"
+                  target="_blank"
+                  class="fa-brands fa-linkedin mx-1"
+                ></a>
+                <a
+                  href="https://facebook.com/p23africa"
+                  target="_blank"
+                  class="fa-brands fa-square-facebook mx-1"
+                ></a>
+                <a
+                  href="https://www.instagram.com/p23africa/"
+                  target="_blank"
+                  class="fa-brands fa-square-instagram mx-1"
+                ></a>
+                <a href="#" class="fa-brands fa-youtube mx-1"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- News Letter -->
+      <div class="contact-news-letter">
+        <img src="./img/contact-left-pattern.png" class="left-pattern" alt="" />
+        <div class="news-letter">
+          <div class="contact-news-letter-container">
+            <div class="contact-news-letter__content">
+              <h2 class="contact-news-letter__title">Subscribe</h2>
+              <p class="contact-news-letter__text">to our Newsletter</p>
+            </div>
+            <form class="contact-news-letter__form">
+              <input
+                type="email"
+                placeholder="Email"
+                class="contact-news-letter__input"
+                required
+              />
+              <button type="submit" class="contact-news-letter__button">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <img
+          src="./img/contact-right-pattern.png"
+          class="right-pattern"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <script>
+      const tags = document.querySelectorAll(".tag");
+      const hiddenInput = document.getElementById("selected-services");
+
+      tags.forEach((tag) => {
+        tag.addEventListener("click", () => {
+          const isSelected = tag.classList.contains("selected");
+
+          // Toggle clicked tag
+          if (isSelected) {
+            tag.classList.remove("selected");
+            tag.querySelector(".tag-icon").src = "./img/unselected.png";
+          } else {
+            tag.classList.add("selected");
+            tag.querySelector(".tag-icon").src = "./img/selected.png";
+          }
+
+          // Collect all selected tag values
+          const selectedValues = Array.from(
+            document.querySelectorAll(".tag.selected")
+          ).map((t) => t.getAttribute("data-value"));
+
+          // Update hidden input value
+          hiddenInput.value = selectedValues.join(",");
+        });
+      });
+
+      const countrySelect = document.getElementById("countrySelect");
+      const selectedCountry = countrySelect.querySelector(".selected-country");
+      const selectedImg = selectedCountry.querySelector(".flag-icon");
+      const countryList = countrySelect.querySelector(".country-list");
+      const phonePrefix = document.getElementById("phonePrefix");
+
+      // Toggle dropdown
+      selectedCountry.addEventListener("click", (e) => {
+        e.stopPropagation();
+        countrySelect.classList.toggle("open");
+      });
+
+      // Handle country selection
+      countryList.querySelectorAll("li").forEach((item) => {
+        item.addEventListener("click", () => {
+          const flag = item.dataset.flag;
+          const code = item.dataset.code;
+
+          selectedImg.src = `https://flagcdn.com/w40/${flag}.png`;
+          phonePrefix.textContent = code;
+
+          // Animate close
+          countryList.style.opacity = "0";
+          countryList.style.transform = "translateY(-8px)";
+          setTimeout(() => {
+            countrySelect.classList.remove("open");
+            countryList.removeAttribute("style");
+          }, 200);
+        });
+      });
+
+      // Click outside closes dropdown
+      document.addEventListener("click", (e) => {
+        if (!countrySelect.contains(e.target)) {
+          countryList.style.opacity = "0";
+          countryList.style.transform = "translateY(-8px)";
+          setTimeout(() => {
+            countrySelect.classList.remove("open");
+            countryList.removeAttribute("style");
+          }, 200);
+        }
+      });
+    </script>
+  </body>
+</html>

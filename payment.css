@@ -1,0 +1,359 @@
+@font-face {
+  font-family: "GT Walsheim Trial Cn Rg";
+  font-style: normal;
+  font-weight: normal;
+  src: local("./fonts/gt-trials/GT Walsheim Trial Cn Rg"),
+    url("GT-Walsheim-Condensed-Regular-Trial-BF651b7fc730eb2.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Md";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Md"),
+    url("./fonts/gt-trials/GT-Walsheim-Condensed-Medium-Trial-BF651b7fc70de01.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Bd";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Bd"),
+    url("./fonts/gt-trials/GT-Walsheim-Condensed-Bold-Trial-BF651b7fc7358e0.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Lt";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Lt"),
+    url("./fonts/gt-trials/GT-Walsheim-Condensed-Light-Trial-BF651b7fc73810c.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Rg";
+  font-style: normal;
+  font-weight: normal;
+  src: local("./fonts/gt-trials/GT Walsheim Trial Cn Rg"),
+    url("GT-Walsheim-Condensed-Regular-Trial-BF651b7fc730eb2.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GT Walsheim ProCB"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBlack.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBlack.woff")
+      format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Con"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-CondensedRegular.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff") format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim ProCB"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBlack.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-CondensedBlack.woff")
+      format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Con"; /* Name your font family */
+
+  src: url("./fonts/gt-walsheim-pro/GTWalsheimPro-CondensedRegular.woff2")
+      format("woff2"),
+    url("../fonts/gt-walsheim-pro/GTWalsheimPro-Regular.woff") format("woff"); /* Adjust file names and paths as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Trial Cn Md";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GT Walsheim Trial Cn Md"),
+    url("./fonts/gt-trials/GT-Walsheim-Condensed-Medium-Trial-BF651b7fc70de01.woff")
+      format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "GT Walsheim ProCB";
+}
+
+.form-sales-container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.form-sales {
+  padding: 2rem 1.7rem;
+  /* padding: 2rem 2.5rem 2rem 1.9rem; */
+  background-image: url("./img/first-bg.png");
+  background-repeat: repeat;
+  background-size: contain;
+}
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.form-image.desktop {
+  display: none;
+}
+.form-image img {
+  max-width: 100%;
+}
+
+.form-image.mobile img {
+  margin-top: 15px;
+  margin-left: -6px;
+}
+
+.form-content h1 {
+  font-size: 2.2rem;
+  color: #0d4036;
+  line-height: 1.1;
+  font-weight: 900;
+}
+.form-content h1 span {
+  color: #52ccb4;
+}
+
+.form-info {
+  margin-top: 40px;
+}
+.form-info .input-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-info input {
+  width: 100%;
+  padding: 1rem 0.5rem 1.4rem 1.6rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  /* box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.12); */
+  border-bottom: 1.6px solid #0d4036;
+}
+.form-info input::placeholder {
+  color: #afaeae;
+  font-family: "GT Walsheim Con";
+  letter-spacing: 0.4px;
+  font-size: 11px;
+}
+.form-info .payment-button {
+  display: inline-block;
+  padding: 0.9rem 4rem;
+  background: #0d4036;
+  font-family: "GT Walsheim Con";
+
+  outline: none;
+
+  color: #fff;
+  font-weight: 400;
+  border-radius: 6px;
+  margin-top: 50px;
+  border: none;
+  letter-spacing: 0.5px;
+}
+
+/* #FBFBFB */
+.form-info .summary-card {
+  /* border-top: 4px solid #f4d9fb;
+  border-bottom: 4px solid #f4d9fb; */
+  border-radius: 15px;
+
+  background-color: #fbfbfb;
+  padding: 0px 30px;
+  width: 100%;
+}
+.summary-card .pattern {
+  width: 96%;
+  margin: 0 auto;
+  background-color: #f4d9fb;
+  height: 5px;
+  border-radius: 20px 20px 0px 0px ;
+}
+.summary-card .pattern.bottom {
+  margin-top: 20px;
+
+  border-radius: 0px 0px 20px 20px ;
+}
+.summary-card .pattern.top {
+  margin-bottom: 20px;
+
+}
+.form-info .summary-card .summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #abaaaa;
+  padding-bottom: 24px;
+  padding-top: 20px;
+}
+.form-info .summary-card .summary-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 24px;
+  padding-top: 20px;
+}
+
+.item-description {
+  color: #6b7b78;
+  font-family: "GT Walsheim Con";
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+.item-price,
+.total-label {
+  color: #0d4036;
+  font-weight: 900;
+}
+
+.total-label {
+  font-family: "GT Walsheim ProCB";
+
+  font-size: 18px;
+  font-weight: 900;
+}
+/* Tablet */
+@media (min-width: 768px) {
+  .form-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+  }
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0rem;
+    margin-left: 7%;
+  }
+  .form-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-image.desktop {
+    display: block;
+
+    margin-left: 0%;
+    overflow: hidden;
+    max-width: initial;
+    margin-left: 0%;
+    max-width: 50rem;
+    position: relative;
+  }
+
+  .form-image.desktop img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  .form-image.mobile {
+    display: none;
+  }
+  .form-info {
+    margin-top: 20px;
+  }
+
+  .form-info .summary-card {
+    margin: 0px 20px;
+  }
+}
+
+@media (min-width: 900px) {
+  .form-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+  }
+
+  .form-content h1 {
+    padding-right: 8px;
+  }
+
+  .form-image.desktop {
+    max-width: 100%;
+  }
+  .form-image.desktop img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-content {
+    padding-left: 80px;
+  }
+
+  .form-image.desktop {
+    max-width: 100%;
+    width: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-content {
+    margin-right: -5%;
+    margin-top: 50px;
+    padding-top: 1rem;
+  }
+
+  .form-info .summary-card {
+    /* margin-left: -3px; */
+  width: 90%;
+
+  }
+  .form-content h1 {
+    padding-right: 0px;
+    font-size: 2rem;
+  }
+
+  .form-info .input-fields {
+    max-width: 430px;
+    /* border: 1px solid red; */
+
+}
+
+  .form-image.desktop {
+    max-width: initial;
+    margin-left: 0%;
+    width: 44rem;
+    overflow: visible;
+
+    /* border: 2px  dashed #DCDEE0 ; */
+
+  }
+  .form-image.desktop img {
+    /* margin-top: 10px; */
+    height: 620px;
+    transform: translateX(-120px);
+    margin-top: 0rem;
+
+  }
+}

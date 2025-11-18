@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Screen</title>
+
+    <link rel="stylesheet" href="./form.css" />
+
+    <script
+      src="https://kit.fontawesome.com/3df60fe6e2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="multistep-form-container">
+      <div class="multi-step-wrapper">
+        <!-- Step Header -->
+        <div class="step-header">
+          <div class="step-counter-container">
+            <div class="step-counter">
+              <div class="counter-circle">
+                <span>01</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-progress-container">
+            <div class="progress-area">
+              <div class="box-area">
+                <span class="progress-text">01 of 04</span>
+                <div class="progress-bar">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="step-divider"></div>
+
+            <!--        STEP 1 TITLE                                   -->
+
+            <div class="step-titles">
+              <!-- STEP 1 -->
+              <div
+                class="step-title active title1"
+                data-title="BUSINESS OVERVIEW"
+                data-subtitle="We use this info to better understand your business before the session."
+              >
+                <h2>BUSINESS OVERVIEW</h2>
+                <p class="mobile-p">
+                  <span>We use this info to better understand</span>
+                  <span> your business before the session</span>
+                </p>
+                <p class="desktop-p">
+                  We use this info to better understand your business before the
+                  session
+                </p>
+              </div>
+
+              <!-- STEP 2 -->
+              <div
+                class="step-title title2"
+                data-title="BRAND IDENTITY"
+                data-subtitle="Tell us more about your brand tone, target audience, and positioning."
+              >
+                <h2>Current Stage & Goals</h2>
+
+                <p class="mobile-p">
+                  <span>What are your current top goals?</span>
+                  <span>(Select up to 2)</span>
+                </p>
+                <p class="desktop-p">
+                  What are your current top goals? (Select up to 2)
+                </p>
+              </div>
+
+              <!-- STEP 3 -->
+              <div
+                class="step-title title3"
+                data-title="challenges"
+                data-subtitle="Share your project goals and the key outcomes you want to achieve."
+              >
+                <h2>Key Challenges</h2>
+
+                <p class="mobile-p">
+                  <span>What challenges are holding your </span>
+                  <span>business back? (Select up to 3)</span>
+                </p>
+                <p class="desktop-p">
+                  What challenges are holding your business back? (Select up to
+                  3)
+                </p>
+              </div>
+
+              <!-- STEP 4 -->
+              <div class="step-title title4" data-title="outcome">
+                <h2>Outcome</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step Content -->
+        <form id="multiStepForm" method="POST" action="submit.php">
+          <!-- STEP 1 -->
+          <div class="form-step active">
+            <div class="form-grid">
+              <div class="grid-input">
+                <input
+                  type="text"
+                  name="full_name"
+                  placeholder="Full Name"
+                  required
+                />
+
+                <input
+                  type="text"
+                  name="company_brand_name"
+                  placeholder="Company/Brand Name"
+                  required
+                />
+
+                <input
+                  type="text"
+                  name="website_or_handle"
+                  placeholder="Website or social media Handle"
+                  required
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  autocomplete="cc-name"
+                  required
+                />
+              </div>
+
+              <div class="grid-input">
+                <!-- CUSTOM SELECT FIELD -->
+                <div class="custom-select-wrapper">
+                  <div class="custom-select" id="industrySelect">
+                    <span class="selected-option">Select Industry</span>
+                    <img
+                      src="../img/arrow-up.png"
+                      class="dropdown-arrow"
+                      alt="▼"
+                    />
+                  </div>
+
+                  <ul class="custom-options">
+                    <li data-value="Technology">Technology</li>
+                    <li data-value="Fashion">Fashion</li>
+                    <li data-value="Food & Beverage">Food & Beverage</li>
+                    <li data-value="Real Estate">Real Estate</li>
+                    <li data-value="Education">Education</li>
+                    <li data-value="Health & Wellness">Health & Wellness</li>
+                    <li data-value="Consulting">Consulting</li>
+                    <li data-value="Other">Other</li>
+                  </ul>
+
+                  <input
+                    type="hidden"
+                    name="industry"
+                    id="industryInput"
+                    required
+                  />
+                </div>
+
+                <textarea
+                  name="business_description"
+                  placeholder="Briefly describe what your business does (1–2 sentences)."
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="step-buttons">
+              <button type="button" class="btn back-btn" disabled>
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button type="button" class="btn next-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="form-step">
+            <!-- STEP 2 -->
+            <div class="step2-wrapper">
+              <div class="goals-grid">
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="business_goals[]"
+                    value="Increase revenue or sales"
+                  />
+                  <span class="goal-text">Increase revenue or sales</span>
+                  <span class="goal-checkmark">
+                    <img src="../img/marked.png" alt="" />
+                  </span>
+                </label>
+
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="business_goals[]"
+                    value="Generate more leads"
+                  />
+                  <span class="goal-text">Generate more leads</span>
+                  <span class="goal-checkmark">
+                    <img src="../img/marked.png" alt="" />
+                  </span>
+                </label>
+
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="business_goals[]"
+                    value="Improve brand visibility"
+                  />
+                  <span class="goal-text">Improve brand visibility</span>
+                  <span class="goal-checkmark">
+                    <img src="../img/marked.png" alt="" />
+                  </span>
+                </label>
+
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="business_goals[]"
+                    value="Launch a new product or service"
+                  />
+                  <span class="goal-text">Launch a new product or service</span>
+                  <span class="goal-checkmark">
+                    <img src="../img/marked.png" alt="" />
+                  </span>
+                </label>
+
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="business_goals[]"
+                    value="Expand into new markets"
+                  />
+                  <span class="goal-text">Expand into new markets</span>
+                  <span class="goal-checkmark">
+                    <img src="../img/marked.png" alt="" />
+                  </span>
+                </label>
+
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="business_goals[]"
+                    value="Prepare for funding or investor conversations"
+                  />
+                  <span class="goal-text"
+                    >Prepare for funding or investor conversations</span
+                  >
+                  <span class="goal-checkmark">
+                    <img src="../img/marked.png" alt="" />
+                  </span>
+                </label>
+
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="business_goals[]"
+                    value="Build internal systems or operational structure"
+                  />
+                  <span class="goal-text"
+                    >Build internal systems or operational structure</span
+                  >
+                  <span class="goal-checkmark">
+                    <img src="../img/marked.png" alt="" />
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Add real fields for step 2 here -->
+
+            <div class="step-buttons">
+              <button type="button" class="btn back-btn" disabled>
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button type="button" class="btn next-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="form-step">
+            <div class="step3-wrapper">
+              <div class="goals-grid">
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="key_challenges[]"
+                    value="Low or inconsistent sales"
+                  />
+                  <span class="goal-text">Low or inconsistent sales</span>
+                  <span class="goal-checkmark"
+                    ><img src="../img/marked.png" alt=""
+                  /></span>
+                </label>
+
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="key_challenges[]"
+                    value="Weak marketing strategy"
+                  />
+                  <span class="goal-text">Weak marketing strategy</span>
+                  <span class="goal-checkmark"
+                    ><img src="../img/marked.png" alt=""
+                  /></span>
+                </label>
+
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="key_challenges[]"
+                    value="Difficulty acquiring customers"
+                  />
+                  <span class="goal-text">Difficulty acquiring customers</span>
+                  <span class="goal-checkmark"
+                    ><img src="../img/marked.png" alt=""
+                  /></span>
+                </label>
+
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="key_challenges[]"
+                    value="Operational inefficiencies"
+                  />
+                  <span class="goal-text">Operational inefficiencies</span>
+                  <span class="goal-checkmark"
+                    ><img src="../img/marked.png" alt=""
+                  /></span>
+                </label>
+
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="key_challenges[]"
+                    value="Monetization not working"
+                  />
+                  <span class="goal-text">Monetization not working</span>
+                  <span class="goal-checkmark"
+                    ><img src="../img/marked.png" alt=""
+                  /></span>
+                </label>
+
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="key_challenges[]"
+                    value="Need clarity on product-market fit"
+                  />
+                  <span class="goal-text"
+                    >Need clarity on product-market fit</span
+                  >
+                  <span class="goal-checkmark"
+                    ><img src="../img/marked.png" alt=""
+                  /></span>
+                </label>
+
+                <label class="goal-card">
+                  <input
+                    type="checkbox"
+                    name="key_challenges[]"
+                    value="Scaling challenges"
+                  />
+                  <span class="goal-text">Scaling challenges</span>
+                  <span class="goal-checkmark"
+                    ><img src="../img/marked.png" alt=""
+                  /></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="step-buttons">
+              <button type="button" class="btn back-btn" disabled>
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button type="button" class="btn next-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div class="form-step step4">
+            <div class="form-grid outcome-grid">
+              <div class="grid-input outcome-input">
+                <label for=""
+                  >What made you book this consultation today?</label
+                >
+                <textarea name="business_description" required></textarea>
+              </div>
+              <div class="grid-input outcome-input">
+                <label for=""
+                  >What would make this session a success for you?</label
+                >
+                <textarea name="business_description" required></textarea>
+              </div>
+            </div>
+
+            <div class="step-buttons">
+              <button type="button" class="btn back-btn" disabled>
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <a href="./consultation-summary.html">
+                <button type="button" class="btn next-btn">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="./form.js"></script>
+  </body>
+</html>
