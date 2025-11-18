@@ -98,121 +98,146 @@
 
               <!-- TIME AREA  -->
               <div class="time-box">
-                <div class="timezone-row">
-                  <label>Set time</label>
+                <div class="time-box-container">
+                  <div class="timezone-row">
+                    <label>Set time</label>
 
-                  <div
-                    class="custom-dropdown timeZone"
-                    id="dropdown-timezone"
-                    tabindex="0"
-                    role="listbox"
-                    aria-label="Timezone"
-                  >
-                    <button
-                      class="cd-toggle"
-                      aria-haspopup="listbox"
-                      aria-expanded="false"
+                    <div
+                      class="custom-dropdown timeZone"
+                      id="dropdown-timezone"
+                      tabindex="0"
+                      role="listbox"
+                      aria-label="Timezone"
                     >
-                      <span class="cd-selected">GMT</span>
-                      <span class="cd-caret">▾</span>
-                    </button>
-                    <ul class="cd-list" role="listbox" aria-hidden="true">
-                      <li role="option" data-value="GMT" class="cd-option">
-                        GMT
-                      </li>
-                      <li role="option" data-value="UTC" class="cd-option">
-                        UTC
-                      </li>
-                      <li role="option" data-value="WAT" class="cd-option">
-                        WAT
-                      </li>
-                    </ul>
+                      <button
+                        class="cd-toggle"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                      >
+                        <span class="cd-selected">GMT</span>
+                        <span class="cd-caret">▾</span>
+                      </button>
+                      <ul class="cd-list" role="listbox" aria-hidden="true">
+                        <li role="option" data-value="GMT" class="cd-option">
+                          GMT
+                        </li>
+                        <li role="option" data-value="UTC" class="cd-option">
+                          UTC
+                        </li>
+                        <li role="option" data-value="WAT" class="cd-option">
+                          WAT
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="time-select-row">
+                    <div
+                      class="custom-dropdown"
+                      id="dropdown-hour"
+                      tabindex="0"
+                      role="listbox"
+                      aria-label="Hour"
+                    >
+                      <button
+                        class="cd-toggle"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                      >
+                        <span class="cd-selected">01</span>
+                        <span class="cd-caret">▾</span>
+                      </button>
+                      <ul
+                        class="cd-list"
+                        role="listbox"
+                        aria-hidden="true"
+                      ></ul>
+                    </div>
+
+                    <span class="time-sep">:</span>
+
+                    <div
+                      class="custom-dropdown"
+                      id="dropdown-minute"
+                      tabindex="0"
+                      role="listbox"
+                      aria-label="Minute"
+                    >
+                      <button
+                        class="cd-toggle"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                      >
+                        <span class="cd-selected">00</span>
+                        <span class="cd-caret">▾</span>
+                      </button>
+                      <ul
+                        class="cd-list"
+                        role="listbox"
+                        aria-hidden="true"
+                      ></ul>
+                    </div>
+
+                    <span class="time-sep">:</span>
+
+                    <div
+                      class="custom-dropdown"
+                      id="dropdown-second"
+                      tabindex="0"
+                      role="listbox"
+                      aria-label="Second"
+                    >
+                      <button
+                        class="cd-toggle"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                      >
+                        <span class="cd-selected">00</span>
+                        <span class="cd-caret">▾</span>
+                      </button>
+                      <ul
+                        class="cd-list"
+                        role="listbox"
+                        aria-hidden="true"
+                      ></ul>
+                    </div>
+
+                    <div
+                      class="custom-dropdown"
+                      id="dropdown-ampm"
+                      tabindex="0"
+                      role="listbox"
+                      aria-label="AM or PM"
+                    >
+                      <button
+                        class="cd-toggle"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                      >
+                        <span class="cd-selected">AM</span>
+                        <span class="cd-caret">▾</span>
+                      </button>
+                      <ul class="cd-list" role="listbox" aria-hidden="true">
+                        <li role="option" data-value="AM" class="cd-option">
+                          AM
+                        </li>
+                        <li role="option" data-value="PM" class="cd-option">
+                          PM
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
 
-                <div class="time-select-row">
-                  <div
-                    class="custom-dropdown"
-                    id="dropdown-hour"
-                    tabindex="0"
-                    role="listbox"
-                    aria-label="Hour"
-                  >
-                    <button
-                      class="cd-toggle"
-                      aria-haspopup="listbox"
-                      aria-expanded="false"
-                    >
-                      <span class="cd-selected">01</span>
-                      <span class="cd-caret">▾</span>
-                    </button>
-                    <ul class="cd-list" role="listbox" aria-hidden="true"></ul>
-                  </div>
+                <!-- SELECTED OUTPUT -->
+                <div class="output-box desktop">
+                  <p><strong>Selected Date:</strong></p>
+                  <p id="selectedDate">—</p>
 
-                  <span class="time-sep">:</span>
-
-                  <div
-                    class="custom-dropdown"
-                    id="dropdown-minute"
-                    tabindex="0"
-                    role="listbox"
-                    aria-label="Minute"
-                  >
-                    <button
-                      class="cd-toggle"
-                      aria-haspopup="listbox"
-                      aria-expanded="false"
-                    >
-                      <span class="cd-selected">00</span>
-                      <span class="cd-caret">▾</span>
-                    </button>
-                    <ul class="cd-list" role="listbox" aria-hidden="true"></ul>
-                  </div>
-
-                  <span class="time-sep">:</span>
-
-                  <div
-                    class="custom-dropdown"
-                    id="dropdown-second"
-                    tabindex="0"
-                    role="listbox"
-                    aria-label="Second"
-                  >
-                    <button
-                      class="cd-toggle"
-                      aria-haspopup="listbox"
-                      aria-expanded="false"
-                    >
-                      <span class="cd-selected">00</span>
-                      <span class="cd-caret">▾</span>
-                    </button>
-                    <ul class="cd-list" role="listbox" aria-hidden="true"></ul>
-                  </div>
-
-                  <div
-                    class="custom-dropdown"
-                    id="dropdown-ampm"
-                    tabindex="0"
-                    role="listbox"
-                    aria-label="AM or PM"
-                  >
-                    <button
-                      class="cd-toggle"
-                      aria-haspopup="listbox"
-                      aria-expanded="false"
-                    >
-                      <span class="cd-selected">AM</span>
-                      <span class="cd-caret">▾</span>
-                    </button>
-                    <ul class="cd-list" role="listbox" aria-hidden="true">
-                      <li role="option" data-value="AM" class="cd-option">
-                        AM
-                      </li>
-                      <li role="option" data-value="PM" class="cd-option">
-                        PM
-                      </li>
-                    </ul>
-                  </div>
+                  <p style="margin-top: 10px">
+                    <strong>Selected Time:</strong>
+                  </p>
+                  <p id="selectedTime">—</p>
                 </div>
               </div>
 
@@ -221,19 +246,10 @@
                 <p id="selectedTime">—</p>
               </div>
 
-              <!-- SELECTED OUTPUT -->
-              <div class="output-box desktop">
-                <p><strong>Selected Date:</strong></p>
-                <p id="selectedDate">—</p>
-
-                <p style="margin-top: 10px"><strong>Selected Time:</strong></p>
-                <p id="selectedTime">—</p>
-              </div>
-
-              <div class=" mobile-btn">
+              <div class="mobile-btn">
                 <button id="submitSchedule">
                   Submit
-                  <div><img src="../img/right.png" alt="" /></div>
+                  <div><img src="../img/right-colored.png" alt="" /></div>
                 </button>
               </div>
             </div>

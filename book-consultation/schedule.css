@@ -59,7 +59,6 @@ img {
   max-width: 100%;
 }
 
-
 .schedule-conversation-section {
   background-image: url(../img/first-bg.png);
   background-position: center;
@@ -169,15 +168,12 @@ img {
 }
 
 .schedule-conversation-section .left-content .schedule-pattern {
-
   height: 90px;
   width: auto;
   position: absolute;
   right: -7px;
   top: -30px;
 }
-
-
 
 #calendar-wrapper {
   width: 100%;
@@ -188,8 +184,8 @@ img {
   font-family: "GT Walsheim Con";
 }
 
-.calendar-wrapper-container{
-  max-width: 600px;
+.calendar-wrapper-container {
+  max-width: 750px;
   margin: 0 auto;
 }
 
@@ -286,7 +282,7 @@ img {
 .time-box {
   margin-top: 60px;
   padding: 15px;
-  background: #0E302A;;
+  background: #0e302a;
   border-radius: 10px;
 }
 
@@ -296,11 +292,9 @@ img {
   margin-bottom: 15px;
 }
 
-.timezone-row > label{
-   font-size: 18px;
+.timezone-row > label {
+  font-size: 18px;
 }
-
-
 
 select {
   background: #1a2c25;
@@ -330,11 +324,13 @@ select {
   font-family: "GT Walsheim Con";
   display: none;
 }
+.calendar-wrapper-container .mobile-btn {
+  margin-top: 60px;
+}
 
-
-.calendar-wrapper-container .mobile-btn  button{
-  background-color: #0d4036;
-  color: #fff;
+.calendar-wrapper-container .mobile-btn button {
+  background-color: #ffffff;
+  color: #0d4036;
   padding: 0.8rem 1.6rem;
   font-family: "GT Walsheim Con";
   text-decoration: none;
@@ -346,13 +342,15 @@ select {
   box-shadow: 0px 12px 15px -3px rgba(0, 0, 0, 0.4);
   outline: none;
   border: none;
+  font-size: 0.9rem;
+  width: 70%;
+  margin: 0 auto;
 }
 
-.calendar-wrapper-container .mobile-btn  button img{
-  width: 10px;
-  height: 10px;
+.calendar-wrapper-container .mobile-btn button img {
+  width: 12px;
+  height: 12px;
 }
-
 
 /* Wrapper for tooltip */
 .prev-wrapper {
@@ -476,10 +474,9 @@ select {
   vertical-align: middle;
 }
 
-.custom-dropdown.timeZone{
+.custom-dropdown.timeZone {
   width: 150px;
 }
-
 
 /* Toggle button */
 .custom-dropdown .cd-toggle {
@@ -499,11 +496,10 @@ select {
   transition: transform 160ms ease, box-shadow 160ms ease;
   /* box-shadow: 0 2px 8px rgba(2, 8, 6, 0.25); */
 }
-.custom-dropdown.timeZone .cd-toggle{
+.custom-dropdown.timeZone .cd-toggle {
   width: 100%;
-  border:  1px solid #8b8b8bef;
+  border: 1px solid #8b8b8bef;
   border-radius: 6px;
-
 }
 /* Hover / focus */
 .custom-dropdown .cd-toggle:hover,
@@ -653,7 +649,6 @@ select {
   }
   .schedule-conversation-section .intro-container {
     flex-direction: column;
-    gap: 80px;
   }
 
   .schedule-conversation-section .left-content {
@@ -665,12 +660,12 @@ select {
   }
 
   .schedule-conversation-section .left-content .content-pattern {
-    display: block;
+    display: none;
     /* transf
     orm: scale(1.2); */
   }
   .schedule-conversation-section .left-content .schedule-pattern {
-    display: none;
+    display: block;
   }
 }
 @media (min-width: 1200px) {
@@ -678,13 +673,18 @@ select {
     flex-direction: row;
     gap: 80px;
   }
+  .calendar-wrapper-container .mobile-btn {
+    display: none;
+  }
   .schedule-conversation-section .left-content {
     padding-top: 10rem;
   }
   .schedule-conversation-section .left-content h3 {
     font-size: 4rem;
   }
-
+  .schedule-conversation-section .left-content .schedule-pattern {
+    display: none;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -735,8 +735,6 @@ select {
     /* transform: scale(1.2); */
   }
 
-
-
   .schedule-conversation-section .desktop-image-cont img.desktop {
     height: 100%;
     object-fit: cover;
@@ -745,5 +743,45 @@ select {
     position: relative;
 
     /* object-position: top; */
+  }
+
+  #calendar-grid {
+    padding: 0px 40px;
+  }
+
+  .time-box {
+    margin: 0px 40px;
+    margin-top: 50px;
+  }
+
+  .calendar-wrapper-container .output-box.mobile {
+    display: none;
+  }
+
+  .calendar-wrapper-container .output-box.desktop {
+    display: block;
+    padding: 0px 40px;
+  }
+
+  #dates {
+    gap: 10px;
+  }
+  .date{
+    padding: 4px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    /* margin-left:  -5rem; */
+  }
+  .weekdays{
+    gap: 30px;
+    transform: translate(-20px);
+  }
+
+  .time-box{
+    background-color: transparent;
+    display: flex;
   }
 }
