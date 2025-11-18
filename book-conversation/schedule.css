@@ -181,11 +181,16 @@ img {
 
 #calendar-wrapper {
   width: 100%;
-  padding: 20px 60px;
+  padding: 20px 50px;
   min-height: 100vh;
   color: #fff;
   background-color: #06221d;
   font-family: "GT Walsheim Con";
+}
+
+.calendar-wrapper-container{
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .calendar-header h3 {
@@ -279,7 +284,7 @@ img {
 }
 
 .time-box {
-  margin-top: 30px;
+  margin-top: 60px;
   padding: 15px;
   background: #0E302A;;
   border-radius: 10px;
@@ -325,6 +330,29 @@ select {
   font-family: "GT Walsheim Con";
   display: none;
 }
+
+
+.calendar-wrapper-container .mobile-btn  button{
+  background-color: #0d4036;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  font-family: "GT Walsheim Con";
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  letter-spacing: 0.6px;
+  box-shadow: 0px 12px 15px -3px rgba(0, 0, 0, 0.4);
+  outline: none;
+  border: none;
+}
+
+.calendar-wrapper-container .mobile-btn  button img{
+  width: 10px;
+  height: 10px;
+}
+
 
 /* Wrapper for tooltip */
 .prev-wrapper {
